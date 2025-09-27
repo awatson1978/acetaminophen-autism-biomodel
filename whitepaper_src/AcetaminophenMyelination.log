@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 SEP 2025 16:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 SEP 2025 17:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -409,11 +409,55 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count325
  (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks39
+\t@pgfplots@tokb=\toks40
+\t@pgfplots@tokc=\toks41
+\pgfplots@tmpa=\dimen287
+\c@pgfplots@coordindex=\count326
+\c@pgfplots@scanlineindex=\count327
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks42
+\t@pgf@tokb=\toks43
+\t@pgf@tokc=\toks44
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count328
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count329
+\t@pgfplotstable@a=\toks45
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count330
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen288
+\pgfdecoratedremainingdistance=\dimen289
+\pgfdecoratedinputsegmentcompleteddistance=\dimen290
+\pgfdecoratedinputsegmentremainingdistance=\dimen291
+\pgf@decorate@distancetomove=\dimen292
+\pgf@decorate@repeatstate=\count331
+\pgfdecorationsegmentamplitude=\dimen293
+\pgfdecorationsegmentlength=\dimen294
+)
+\tikz@lib@dec@box=\box75
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count332
+\pgfplots@xmin@reg=\dimen295
+\pgfplots@xmax@reg=\dimen296
+\pgfplots@ymin@reg=\dimen297
+\pgfplots@ymax@reg=\dimen298
+\pgfplots@zmin@reg=\dimen299
+\pgfplots@zmax@reg=\dimen300
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2025/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count326
-\c@@ppsavesec=\count327
-\c@@ppsaveapp=\count328
+\c@@pps=\count333
+\c@@ppsavesec=\count334
+\c@@ppsaveapp=\count335
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
  (/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
@@ -433,13 +477,13 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count329
+\c@section@level=\count336
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen287
-\Hy@linkcounter=\count330
-\Hy@pagecounter=\count331
+\@linkdim=\dimen301
+\Hy@linkcounter=\count337
+\Hy@pagecounter=\count338
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -447,7 +491,7 @@ Now handling font encoding PD1 ...
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count332
+\Hy@SavedSpaceFactor=\count339
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -460,21 +504,21 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count333
+\c@Hy@tempcnt=\count340
  (/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen288
+\XeTeXLinkMargin=\dimen302
  (/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count334
-\Field@Width=\dimen289
-\Fld@charsize=\dimen290
+\Fld@menulength=\count341
+\Field@Width=\dimen303
+\Fld@charsize=\dimen304
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -486,9 +530,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count335
-\c@Item=\count336
-\c@Hfootnote=\count337
+\Hy@abspage=\count342
+\c@Item=\count343
+\c@Hfootnote=\count344
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -497,8 +541,8 @@ File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count338
-\c@bookmark@seq@number=\count339
+\Fld@listcount=\count345
+\c@bookmark@seq@number=\count346
  (/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -509,54 +553,54 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip58
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen291
-\pgfarrowlength=\dimen292
-\pgfarrowwidth=\dimen293
-\pgfarrowlinewidth=\dimen294
+\pgfarrowinset=\dimen305
+\pgfarrowlength=\dimen306
+\pgfarrowwidth=\dimen307
+\pgfarrowlinewidth=\dimen308
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 21.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 23.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count340
-\l__pdf_internal_box=\box75
+\l__color_backend_stack_int=\count347
+\l__pdf_internal_box=\box76
 ) (./AcetaminophenMyelination.aux)
 \openout1 = `AcetaminophenMyelination.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count341
-\scratchdimen=\dimen295
-\scratchbox=\box76
-\nofMPsegments=\count342
-\nofMParguments=\count343
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count344
-\MPscratchDim=\dimen296
-\MPnumerator=\count345
-\makeMPintoPDFobject=\count346
-\everyMPtoPDFconversion=\toks40
+\scratchcounter=\count348
+\scratchdimen=\dimen309
+\scratchbox=\box77
+\nofMPsegments=\count349
+\nofMParguments=\count350
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count351
+\MPscratchDim=\dimen310
+\MPnumerator=\count352
+\makeMPintoPDFobject=\count353
+\everyMPtoPDFconversion=\toks47
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -600,56 +644,26 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 21.
-Package hyperref Info: Link coloring OFF on input line 21.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 23.
+
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+Package hyperref Info: Link coloring OFF on input line 23.
+(./AcetaminophenMyelination.out) (./AcetaminophenMyelination.out)
 \@outlinefile=\write4
 \openout4 = `AcetaminophenMyelination.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-Package natbib Warning: Citation `navarro2025' on page 1 undefined on input line 25.
-
-
-Overfull \hbox (13.15408pt too wide) in paragraph at lines 25--26
+Overfull \hbox (13.15408pt too wide) in paragraph at lines 27--28
 []\OT1/cmr/m/n/10.95 The re-cent HHS an-nounce-ment ac-knowl-edg-ing con-cerns about pre-na-tal ac-etaminophen
  []
-
-
-Package natbib Warning: Citation `kristensen2016' on page 1 undefined on input line 29.
-
-
-Package natbib Warning: Citation `masarwa2018' on page 1 undefined on input line 29.
-
-
-Package natbib Warning: Citation `chen2023' on page 1 undefined on input line 29.
-
-
-Package natbib Warning: Citation `schultz2008' on page 1 undefined on input line 29.
-
-
-Package natbib Warning: Citation `torres2003' on page 1 undefined on input line 29.
-
-
-Package natbib Warning: Citation `shaw2013' on page 1 undefined on input line 29.
-
-
-Package natbib Warning: Citation `parker2020' on page 1 undefined on input line 29.
-
-
-Package natbib Warning: Citation `liew2016' on page 1 undefined on input line 29.
-
-
-Package natbib Warning: Citation `avella2016' on page 1 undefined on input line 29.
-
-
-Package natbib Warning: Citation `navarro2025' on page 1 undefined on input line 37.
 
 
 
@@ -657,421 +671,151 @@ Package natbib Warning: Citation `navarro2025' on page 1 undefined on input line
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-Package natbib Warning: Citation `liew2016' on page 2 undefined on input line 39.
-
-
-Package natbib Warning: Citation `brandlistuen2013' on page 2 undefined on input line 39.
-
-
-Package natbib Warning: Citation `ystrom2017' on page 2 undefined on input line 39.
-
-
-Package natbib Warning: Citation `perez2012' on page 2 undefined on input line 40.
-
-
-Package natbib Warning: Citation `posadas2019' on page 2 undefined on input line 40.
-
-
-Package natbib Warning: Citation `viberg2014' on page 2 undefined on input line 41.
-
-
-Package natbib Warning: Citation `philippot2022' on page 2 undefined on input line 41.
-
-
-Package natbib Warning: Citation `blecharz2018' on page 2 undefined on input line 41.
-
-
-Package natbib Warning: Citation `ji2020' on page 2 undefined on input line 42.
-
-
-Package natbib Warning: Citation `perez2012' on page 2 undefined on input line 46.
-
-
-Package natbib Warning: Citation `kristensen2016' on page 2 undefined on input line 46.
-
-
-LaTeX Warning: Reference `sec:asd-genes' on page 2 undefined on input line 51.
-
-<../assets/Autism-Ideogram.png, id=20, 760.8425pt x 459.7175pt>
-File: ../assets/Autism-Ideogram.png Graphic file (type png)
-<use ../assets/Autism-Ideogram.png>
-Package pdftex.def Info: ../assets/Autism-Ideogram.png  used on input line 68.
-(pdftex.def)             Requested size: 469.75502pt x 283.84343pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=22, 284.39583pt x 171.64125pt>
-File: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png Graphic file (type png)
-<use ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>
-Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 76.
-(pdftex.def)             Requested size: 375.80544pt x 226.82378pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package natbib Warning: Citation `baker2020' on page 2 undefined on input line 82.
-
-
-Package natbib Warning: Citation `kristensen2016' on page 2 undefined on input line 82.
-
-
-Package natbib Warning: Citation `zhu2021' on page 2 undefined on input line 82.
-
-<../assets/MechanisticPathways.png, id=23, 998.73125pt x 662.475pt>
-File: ../assets/MechanisticPathways.png Graphic file (type png)
-<use ../assets/MechanisticPathways.png>
-Package pdftex.def Info: ../assets/MechanisticPathways.png  used on input line 92.
-(pdftex.def)             Requested size: 422.77664pt x 280.43115pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package natbib Warning: Citation `parker2020' on page 2 undefined on input line 99.
-
-
-Package natbib Warning: Citation `posadas2019' on page 2 undefined on input line 99.
-
-
-Package natbib Warning: Citation `philippot2022' on page 2 undefined on input line 99.
-
-
-Package natbib Warning: Citation `riffel2020' on page 2 undefined on input line 99.
-
-
-Package natbib Warning: Citation `kristensen2016' on page 2 undefined on input line 102.
-
-
-Package natbib Warning: Citation `bauer2021' on page 2 undefined on input line 102.
-
-
-Package natbib Warning: Citation `liew2016' on page 2 undefined on input line 102.
-
-
-
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-Package natbib Warning: Citation `zhu2021' on page 3 undefined on input line 105.
-
-
-Package natbib Warning: Citation `schultz2008' on page 3 undefined on input line 105.
-
-
-Package natbib Warning: Citation `bittker2018' on page 3 undefined on input line 105.
-
-
-Package natbib Warning: Citation `perez2012' on page 3 undefined on input line 108.
-
-
-Package natbib Warning: Citation `blecharz2018' on page 3 undefined on input line 108.
-
-
-Package natbib Warning: Citation `viberg2014' on page 3 undefined on input line 108.
-
-<../assets/GreyWhiteMatter.png, id=36, 1027.84pt x 1027.84pt>
-File: ../assets/GreyWhiteMatter.png Graphic file (type png)
-<use ../assets/GreyWhiteMatter.png>
-Package pdftex.def Info: ../assets/GreyWhiteMatter.png  used on input line 117.
-(pdftex.def)             Requested size: 422.77664pt x 422.7816pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../assets/Myelination-Sankey.png, id=37, 956.57375pt x 301.125pt>
-File: ../assets/Myelination-Sankey.png Graphic file (type png)
-<use ../assets/Myelination-Sankey.png>
-Package pdftex.def Info: ../assets/Myelination-Sankey.png  used on input line 127.
-(pdftex.def)             Requested size: 399.29463pt x 125.69511pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package natbib Warning: Citation `baker2020' on page 3 undefined on input line 135.
-
-
-Package natbib Warning: Citation `viberg2014' on page 3 undefined on input line 135.
-
-
-Package natbib Warning: Citation `blecharz2018' on page 3 undefined on input line 135.
-
-
-Package natbib Warning: Citation `ji2020' on page 3 undefined on input line 135.
-
-
-
-[3 <../assets/Autism-Ideogram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]|\OT1/cmr/m/n/10.95 Oxidative
- []
-
-
-Overfull \hbox (4.09473pt too wide) in paragraph at lines 145--145
-\OT1/cmr/m/n/10.95 stress/mitochondria| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-[]|\OT1/cmr/m/n/10.95 Energy deficits in neu-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-\OT1/cmr/m/n/10.95 rons/OPCs; neu-roin-flam-
- []
-
-
-Underfull \hbox (badness 2452) in paragraph at lines 146--146
-[]|\OT1/cmr/m/n/10.95 Endocrine dis-rup-
- []
-
-
-Underfull \hbox (badness 2293) in paragraph at lines 146--147
-[]|\OT1/cmr/m/n/10.95 Sex-dimorphic cir-cuit for-ma-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-[]|\OT1/cmr/m/n/10.95 Epigenetic re-pro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-[]|\OT1/cmr/m/n/10.95 DNA methy-la-tion shifts at
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--148
-[]|\OT1/cmr/m/n/10.95 OPC tox-i-c-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
-[]|\OT1/cmr/m/n/10.95 Connectome re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
-[]|\OT1/cmr/m/n/10.95 Attention/social in-te-gra-tion
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../assets/nihms-1569306-f0005.jpg, id=48, 473.6094pt x 505.89pt>
-File: ../assets/nihms-1569306-f0005.jpg Graphic file (type jpg)
-<use ../assets/nihms-1569306-f0005.jpg>
-Package pdftex.def Info: ../assets/nihms-1569306-f0005.jpg  used on input line 162.
-(pdftex.def)             Requested size: 399.29463pt x 426.51941pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../assets/SpongeModel.png, id=49, 1541.76pt x 1027.84pt>
-File: ../assets/SpongeModel.png Graphic file (type png)
-<use ../assets/SpongeModel.png>
-Package pdftex.def Info: ../assets/SpongeModel.png  used on input line 179.
-(pdftex.def)             Requested size: 422.77664pt x 281.84917pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[4 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
-
-[5 <../assets/MechanisticPathways.png>]
-<../assets/fetal-development.png, id=77, 1541.76pt x 1027.84pt>
-File: ../assets/fetal-development.png Graphic file (type png)
-<use ../assets/fetal-development.png>
-Package pdftex.def Info: ../assets/fetal-development.png  used on input line 214.
-(pdftex.def)             Requested size: 469.75502pt x 313.16924pt.
+[3]
+<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=369, 284.39583pt x 171.64125pt>
+File: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png Graphic file (type png)
+<use ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>
+Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 105.
+(pdftex.def)             Requested size: 375.80544pt x 226.82378pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-/Volumes/SonicMagic/Code/demylination/acetaminophen-autism-biomodel/whitepaper_src/AcetaminophenMyelination.tex:225: LaTeX Error: Unknown graphics extension: .webp.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.225 ...extwidth]{../assets/fetal-mri-22wks.webp}
-                                                   &
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
-<../assets/fetal-mri-32wks.png, id=78, 390.61935pt x 146.10585pt>
-File: ../assets/fetal-mri-32wks.png Graphic file (type png)
-<use ../assets/fetal-mri-32wks.png>
-Package pdftex.def Info: ../assets/fetal-mri-32wks.png  used on input line 226.
-(pdftex.def)             Requested size: 211.38832pt x 79.06764pt.
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+[]|\OT1/cmr/bx/n/12 Predicted neu-rode-vel-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+[]|\OT1/cmr/m/n/12 Oxidative
+ []
+
+
+Overfull \hbox (16.66985pt too wide) in paragraph at lines 155--155
+\OT1/cmr/m/n/12 stress/mitochondria| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+[]|\OT1/cmr/m/n/12 Energy deficits in neu-
+ []
+
+
+Underfull \hbox (badness 8113) in paragraph at lines 155--156
+\OT1/cmr/m/n/12 rons/OPCs; neu-roin-flam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]|\OT1/cmr/m/n/12 Endocrine dis-
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 156--157
+[]|\OT1/cmr/m/n/12 Sex-dimorphic cir-cuit for-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+[]|\OT1/cmr/m/n/12 Epigenetic re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+[]|\OT1/cmr/m/n/12 Persistent gene net-work
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+[]|\OT1/cmr/m/n/12 OPC tox-i-c-
+ []
+
+
+Underfull \hbox (badness 4726) in paragraph at lines 158--158
+\OT1/cmr/m/n/12 duced BDNF; be-hav-ioral
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+[]|\OT1/cmr/m/n/12 Hypomyelination; slowed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]|\OT1/cmr/m/n/12 Frequency-
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 159--159
+\OT1/cmr/m/n/12 in MS; sex dif-fer-ences in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+[]|\OT1/cmr/m/n/12 Disrupted neu-ral syn-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+\OT1/cmr/m/n/12 chro-niza-tion; im-paired
+ []
+
+
+Underfull \hbox (badness 5533) in paragraph at lines 159--160
+\OT1/cmr/m/n/12 frequency-dependent com-
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/12 Connectome re-
+ []
+
+
+Underfull \hbox (badness 5726) in paragraph at lines 160--160
+\OT1/cmr/m/n/12 nec-tiv-ity (hu-man); rigid
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package natbib Warning: Citation `masarwa2018' on page 6 undefined on input line 244.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package natbib Warning: Citation `liew2014' on page 6 undefined on input line 244.
 
+[4]
 
-Package natbib Warning: Citation `thompson2014' on page 6 undefined on input line 244.
-
-
-Package natbib Warning: Citation `navarro2025' on page 6 undefined on input line 247.
-
-
-Package natbib Warning: Citation `liew2016' on page 6 undefined on input line 247.
-
-
-Package natbib Warning: Citation `ystrom2017' on page 6 undefined on input line 247.
-
-
-Package natbib Warning: Citation `avella2016' on page 6 undefined on input line 247.
-
-
-Package natbib Warning: Citation `thompson2014' on page 6 undefined on input line 247.
-
-
-Package natbib Warning: Citation `vlenterie2016' on page 6 undefined on input line 247.
-
-
-Package natbib Warning: Citation `chen2023' on page 6 undefined on input line 247.
-
-
+[5 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
 
 [6]
 
-Package natbib Warning: Citation `kristensen2016' on page 7 undefined on input line 259.
-
-
-Package natbib Warning: Citation `avella2016' on page 7 undefined on input line 259.
-
-
-Package natbib Warning: Citation `liew2021' on page 7 undefined on input line 259.
-
-
-Package natbib Warning: Citation `liew2014' on page 7 undefined on input line 262.
-
-
-Package natbib Warning: Citation `brandlistuen2013' on page 7 undefined on input line 262.
-
-
-Package natbib Warning: Citation `ji2020' on page 7 undefined on input line 262.
-
-
-Package natbib Warning: Citation `bauer2021' on page 7 undefined on input line 265.
-
-
-Package natbib Warning: Citation `parker2020' on page 7 undefined on input line 265.
-
-
-Package natbib Warning: Citation `kristensen2016' on page 7 undefined on input line 265.
-
-
-Package natbib Warning: Citation `perez2012' on page 7 undefined on input line 265.
-
-
-Package natbib Warning: Citation `zhu2021' on page 7 undefined on input line 265.
-
-
-Package natbib Warning: Citation `viberg2014' on page 7 undefined on input line 271.
-
-
-Package natbib Warning: Citation `philippot2022' on page 7 undefined on input line 271.
-
-
-Package natbib Warning: Citation `blecharz2018' on page 7 undefined on input line 271.
-
-
-Package natbib Warning: Citation `brandlistuen2013' on page 7 undefined on input line 271.
-
-
-Package natbib Warning: Citation `stergiakouli2016' on page 7 undefined on input line 271.
-
-
-
 [7]
-
-Package natbib Warning: Citation `navarro2025' on page 8 undefined on input line 296.
-
-
-Package natbib Warning: Citation `bauer2021' on page 8 undefined on input line 296.
-
-
-Package natbib Warning: Citation `bauer2021' on page 8 undefined on input line 296.
-
-
-Package natbib Warning: Citation `bauer2021' on page 8 undefined on input line 299.
-
-
-Package natbib Warning: Citation `masarwa2018' on page 8 undefined on input line 301.
-
-
-Package natbib Warning: Citation `shaw2013' on page 8 undefined on input line 304.
-
-
-Package natbib Warning: Citation `ji2020' on page 8 undefined on input line 310.
-
-
-Package natbib Warning: Citation `baker2020' on page 8 undefined on input line 311.
-
-
-Package natbib Warning: Citation `leppert2019' on page 8 undefined on input line 312.
-
-
-Package natbib Warning: Citation `schultz2008' on page 8 undefined on input line 312.
-
-
-Package natbib Warning: Citation `parker2020' on page 8 undefined on input line 313.
-
-
-Package natbib Warning: Citation `vlenterie2016' on page 8 undefined on input line 314.
+Overfull \hbox (4.15256pt too wide) in paragraph at lines 246--247
+\OT1/cmr/m/n/12 Over 30 epi-demi-o-log-i-cal stud-ies across dif-fer-ent pop-u-la-tions show sim-i-lar as-so-ci-a-tions [[]Navarro
+ []
 
 
 
 [8]
 
-Package natbib Warning: Citation `leppert2019' on page 9 undefined on input line 318.
-
-
-Package natbib Warning: Citation `perez2012' on page 9 undefined on input line 318.
-
-
-Package natbib Warning: Citation `brandlistuen2013' on page 9 undefined on input line 318.
-
-
-Package natbib Warning: Citation `stergiakouli2016' on page 9 undefined on input line 318.
-
-
-Package natbib Warning: Citation `bauer2021' on page 9 undefined on input line 321.
-
-
-Package natbib Warning: Citation `navarro2025' on page 9 undefined on input line 321.
-
-
-Package natbib Warning: Citation `masarwa2018' on page 9 undefined on input line 321.
-
-
-Overfull \hbox (0.60475pt too wide) in paragraph at lines 324--324
-[]\OT1/cmr/bx/n/17.28 Technical Ap-pendix: De-tailed Math-e-mat-i-cal Frame-
- []
-
-
-
 [9]
 
 [10]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (0.60475pt too wide) in paragraph at lines 334--334
+[]\OT1/cmr/bx/n/17.28 Technical Ap-pendix: De-tailed Math-e-mat-i-cal Frame-
+ []
 
 
 
 [11]
 
 [12]
-Overfull \hbox (13.647pt too wide) in paragraph at lines 554--555
-\OT1/cmr/m/n/12 Several ASD risk genes are in-volved in path-ways po-ten-tially af-fected by pre-na-tal ac-etaminophen: 
- []
-
-
 
 [13]
 
@@ -1081,59 +825,29 @@ Overfull \hbox (13.647pt too wide) in paragraph at lines 554--555
 
 [16]
 
-Package natbib Warning: There were undefined citations.
-
-
-
 [17]
 
-[18 <../assets/GreyWhiteMatter.png (PNG copy)>]
-
-[19 <../assets/Myelination-Sankey.png>]
-
-[20 <../assets/nihms-1569306-f0005.jpg>]
-
-[21 <../assets/SpongeModel.png (PNG copy)>]
-
-[22 <../assets/fetal-development.png (PNG copy)> <../assets/fetal-mri-32wks.png>] (./AcetaminophenMyelination.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+[18] (./AcetaminophenMyelination.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `AcetaminophenMyelination.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `AcetaminophenMyelination.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  6387C855477D20F994A60285AAFE72F6;9550.
+Package rerunfilecheck Info: File `AcetaminophenMyelination.out' has not changed.
+(rerunfilecheck)             Checksum: 8FE124F8E3F046451A11DF708CD68775;9826.
  ) 
 Here is how much of TeX's memory you used:
- 25805 strings out of 473190
- 528572 string characters out of 5715801
- 877844 words of memory out of 5000000
- 48531 multiletter control sequences out of 15000+600000
- 570761 words of font info for 81 fonts, out of 8000000 for 9000
+ 36170 strings out of 473190
+ 877845 string characters out of 5715801
+ 1321783 words of memory out of 5000000
+ 58762 multiletter control sequences out of 15000+600000
+ 569513 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,91p,963b,1189s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,19n,91p,993b,2165s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on AcetaminophenMyelination.pdf (22 pages, 7343299 bytes).
+Output written on AcetaminophenMyelination.pdf (18 pages, 546751 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 166 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 687 PDF objects out of 1000 (max. 8388607)
+ 632 compressed objects within 7 object streams
+ 160 named destinations out of 1000 (max. 500000)
+ 458 words of extra memory for PDF output out of 10000 (max. 10000000)
 
