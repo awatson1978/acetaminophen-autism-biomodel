@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 SEP 2025 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 SEP 2025 13:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -623,10 +623,10 @@ Overfull \hbox (13.15408pt too wide) in paragraph at lines 25--26
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=243, 284.39583pt x 171.64125pt>
+<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=300, 284.39583pt x 171.64125pt>
 File: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png Graphic file (type png)
 <use ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>
-Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 63.
+Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 62.
 (pdftex.def)             Requested size: 375.80544pt x 226.82378pt.
 
 
@@ -635,67 +635,67 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+
+[3 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 []|\OT1/cmr/m/n/10.95 Oxidative
  []
 
 
-Overfull \hbox (4.09473pt too wide) in paragraph at lines 94--94
+Overfull \hbox (4.09473pt too wide) in paragraph at lines 93--93
 \OT1/cmr/m/n/10.95 stress/mitochondria| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 []|\OT1/cmr/m/n/10.95 Energy deficits in neu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 \OT1/cmr/m/n/10.95 rons/OPCs; neu-roin-flam-
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 95--95
+Underfull \hbox (badness 2452) in paragraph at lines 94--94
 []|\OT1/cmr/m/n/10.95 Endocrine dis-rup-
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 95--96
+Underfull \hbox (badness 2293) in paragraph at lines 94--95
 []|\OT1/cmr/m/n/10.95 Sex-dimorphic cir-cuit for-ma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 []|\OT1/cmr/m/n/10.95 Epigenetic re-pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 []|\OT1/cmr/m/n/10.95 DNA methy-la-tion shifts at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 []|\OT1/cmr/m/n/10.95 OPC tox-i-c-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []|\OT1/cmr/m/n/10.95 Connectome re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 []|\OT1/cmr/m/n/10.95 Attention/social in-te-gra-tion
  []
 
 
 
-[3 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
-
 [4]
-Overfull \hbox (5.94315pt too wide) in paragraph at lines 138--139
-\OT1/cmr/m/n/12 Meta-analyses re-port OR 1.2-1.5 for ASD/ADHD with pre-na-tal APAP ex-po-sure, with stronger
+Overfull \hbox (4.15256pt too wide) in paragraph at lines 140--141
+\OT1/cmr/m/n/12 Over 30 epi-demi-o-log-i-cal stud-ies across dif-fer-ent pop-u-la-tions show sim-i-lar as-so-ci-a-tions [[]Navarro
  []
 
 
@@ -703,13 +703,13 @@ Overfull \hbox (5.94315pt too wide) in paragraph at lines 138--139
 [5]
 
 [6]
+
+[7]
 Overfull \hbox (0.60475pt too wide) in paragraph at lines 211--211
 []\OT1/cmr/bx/n/17.28 Technical Ap-pendix: De-tailed Math-e-mat-i-cal Frame-
  []
 
 
-
-[7]
 
 [8]
 
@@ -721,16 +721,26 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
 [11]
+
+[12]
 Overfull \hbox (13.647pt too wide) in paragraph at lines 441--442
 \OT1/cmr/m/n/12 Several ASD risk genes are in-volved in path-ways po-ten-tially af-fected by pre-na-tal ac-etaminophen: 
  []
 
 
 
-[12]
+[13]
 
-[13] (./AcetaminophenMyelination.aux)
+[14]
+
+[15]
+
+[16] (./AcetaminophenMyelination.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -739,18 +749,18 @@ Package rerunfilecheck Info: File `AcetaminophenMyelination.out' has not changed
 (rerunfilecheck)             Checksum: 6387C855477D20F994A60285AAFE72F6;9550.
  ) 
 Here is how much of TeX's memory you used:
- 25645 strings out of 473190
- 524074 string characters out of 5715801
- 873371 words of memory out of 5000000
- 48411 multiletter control sequences out of 15000+600000
+ 25758 strings out of 473190
+ 525985 string characters out of 5715801
+ 876238 words of memory out of 5000000
+ 48494 multiletter control sequences out of 15000+600000
  570761 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,91p,764b,1172s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,13n,91p,954b,1182s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on AcetaminophenMyelination.pdf (13 pages, 526193 bytes).
+Output written on AcetaminophenMyelination.pdf (16 pages, 546824 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 401 compressed objects within 5 object streams
- 122 named destinations out of 1000 (max. 500000)
+ 680 PDF objects out of 1000 (max. 8388607)
+ 627 compressed objects within 7 object streams
+ 152 named destinations out of 1000 (max. 500000)
  466 words of extra memory for PDF output out of 10000 (max. 10000000)
 

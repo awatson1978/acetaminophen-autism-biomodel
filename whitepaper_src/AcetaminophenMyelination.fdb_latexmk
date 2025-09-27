@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1758995749.28057 "/Volumes/SonicMagic/Code/demylination/acetaminophen-autism-biomodel/whitepaper_src/AcetaminophenMyelination.tex" "AcetaminophenMyelination.pdf" "AcetaminophenMyelination" 1758995750.46558 0
+["pdflatex"] 1758996690.1327 "/Volumes/SonicMagic/Code/demylination/acetaminophen-autism-biomodel/whitepaper_src/AcetaminophenMyelination.tex" "AcetaminophenMyelination.pdf" "AcetaminophenMyelination" 1758996691.07975 0
   "../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png" 1758857650 405832 a106d176f80c597e00935ae1fa3ea003 ""
-  "/Volumes/SonicMagic/Code/demylination/acetaminophen-autism-biomodel/whitepaper_src/AcetaminophenMyelination.tex" 1758995749 22848 6b7cb2b0447ab5d47a22b772dc773300 ""
+  "/Volumes/SonicMagic/Code/demylination/acetaminophen-autism-biomodel/whitepaper_src/AcetaminophenMyelination.tex" 1758996687 34423 103008793c99ea73524b9519031d7a37 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -174,9 +174,9 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1758853136 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "AcetaminophenMyelination.aux" 1758995750 8554 a63ee6d72dfa5db8b954656da22daf5b "pdflatex"
-  "AcetaminophenMyelination.out" 1758995750 9550 6387c855477d20f994a60285aafe72f6 "pdflatex"
-  "AcetaminophenMyelination.tex" 1758995749 22848 6b7cb2b0447ab5d47a22b772dc773300 ""
+  "AcetaminophenMyelination.aux" 1758996691 11644 825731b708a43a7dc9defc90f79b9d0e "pdflatex"
+  "AcetaminophenMyelination.out" 1758996691 9550 6387c855477d20f994a60285aafe72f6 "pdflatex"
+  "AcetaminophenMyelination.tex" 1758996687 34423 103008793c99ea73524b9519031d7a37 ""
   (generated)
   "AcetaminophenMyelination.aux"
   "AcetaminophenMyelination.log"
