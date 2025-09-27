@@ -56,6 +56,20 @@ Analysis of 102 verified ASD loci revealed distinct functional categories affect
     \item Critical genes include \textit{CHD8}, \textit{SHANK3}, \textit{FMR1}, and neurexin/neuroligin families
 \end{itemize}
 
+% 1. AUTISM IDEOGRAM - Insert AFTER line ~50-55
+% Location: Section 3.1 (Results - Genetic Architecture of Autism)
+% INSERT AFTER this text:
+% "    \item Critical genes include \textit{CHD8}, \textit{SHANK3}, \textit{FMR1}, and neurexin/neuroligin families"
+% "\end{itemize}"
+% BEFORE the existing placeholder microscopic figure
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../assets/Autism-Ideogram.png}
+\caption{Chromosomal ideogram showing distribution of 102 ASD-associated genetic loci across the human genome. Note the concentration of risk genes on chromosomes X, 2, and 7, with X-linked genes potentially explaining male predominance in ASD.}
+\label{fig:autism-ideogram}
+\end{figure}
+
 % Placeholder for ideogram figure
 \begin{figure}[h]
 \centering
@@ -66,6 +80,20 @@ Analysis of 102 verified ASD loci revealed distinct functional categories affect
 
 \subsection{Mechanistic Model of Action}
 Emerging evidence suggests that prenatal APAP perturbs multiple biological pathways \citep{baker2020,kristensen2016,zhu2021}. Our model treats these not as siloed mechanisms, but as an integrated cascade.
+
+% 2. MECHANISTIC PATHWAYS - Insert AFTER line ~68-70
+% Location: Beginning of Section 3.2 (Mechanistic Model of Action)
+% INSERT AFTER: "\subsection{Mechanistic Model of Action}"
+% and AFTER: "Emerging evidence suggests that prenatal APAP perturbs multiple biological pathways..."
+% BEFORE: "\subsubsection{Oxidative Stress and Mitochondrial Dysfunction}"
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../assets/MechanisticPathways.png}
+\caption{Integrated mechanistic pathways linking prenatal acetaminophen exposure to neurodevelopmental outcomes. The model shows convergent effects through oxidative stress, endocrine disruption, epigenetic modifications, and oligodendrocyte toxicity, ultimately affecting myelination and connectome development.}
+\label{fig:mechanistic-pathways}
+\end{figure}
+
 
 \subsubsection{Oxidative Stress and Mitochondrial Dysfunction}
 APAP metabolite NAPQI depletes glutathione, generating reactive oxygen species (ROS) that damage oligodendrocytes and neurons \citep{parker2020,posadas2019}. Placental transcriptomics show downregulation of oxidative phosphorylation genes. In rodents, therapeutic-equivalent doses cause hippocampal oxidative stress within hours \citep{philippot2022,riffel2020}.
@@ -78,6 +106,30 @@ DNA methylation shifts have been observed in cord blood and placenta, particular
 
 \subsubsection{Oligodendrocyte Toxicity and Myelination}
 Mixed glial cultures exposed to APAP show up to 90\% oligodendrocyte precursor cell (OPC) death at 20 mM; even 1 mM reduces OPC markers by 25\% \citep{perez2012}. Rodent studies show reduced BDNF and autism-like social behaviors \citep{blecharz2018}. Neonatal exposure leads to cognitive deficits and altered analgesic responses in adulthood \citep{viberg2014}.
+
+% 3. GREY-WHITE MATTER - Insert AFTER line ~85-88
+% Location: Section 3.2.4 (Oligodendrocyte Toxicity and Myelination)
+% INSERT AFTER: "Mixed glial cultures exposed to APAP show up to 90\% oligodendrocyte precursor cell (OPC) death at 20 mM..."
+% and AFTER: "Rodent studies show reduced BDNF and autism-like social behaviors..."
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../assets/GreyWhiteMatter.png}
+\caption{Structural comparison of grey and white matter organization in the developing brain. White matter tracts, composed of myelinated axons, are particularly vulnerable to acetaminophen-induced oligodendrocyte toxicity during critical developmental windows.}
+\label{fig:grey-white-matter}
+\end{figure}
+
+% 4. MYELINATION SANKEY - Also in Section 3.2.4
+% INSERT immediately after the GreyWhiteMatter figure
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{../assets/Myelination-Sankey.png}
+\caption{Sankey diagram illustrating the flow of effects from acetaminophen exposure through oligodendrocyte precursor cell (OPC) toxicity to disrupted myelination patterns. Width of flows represents relative contribution to overall myelination deficit.}
+\label{fig:myelination-sankey}
+\end{figure}
+
+
 
 \subsubsection{Altered Connectome}
 Human fMRI studies find weaker frontoparietal connectivity in exposed children \citep{baker2020}, while rodent models reveal rigid learning and reduced social play \citep{viberg2014,blecharz2018}. Cord blood biomarkers of in utero exposure correlate with later ADHD and ASD diagnoses \citep{ji2020}. These findings support the hypothesis of ASD as a ``connectopathy.''
@@ -100,10 +152,34 @@ Human fMRI studies find weaker frontoparietal connectivity in exposed children \
   \caption{Converging evidence and model-level implications.}
 \end{table}
 
+% 5. EVIDENCE SUMMARY - Insert AFTER line ~108-110
+% Location: After Section 4 (Evidence Synthesis) table
+% INSERT AFTER the table ending with "\end{table}"
+% BEFORE Section 5 begins
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{../assets/nihms-1569306-f0005.jpg}
+\caption{Summary of converging evidence from epidemiological, mechanistic, and experimental studies linking prenatal acetaminophen exposure to neurodevelopmental outcomes through myelination disruption.}
+\label{fig:evidence-summary}
+\end{figure}
+
 \section{BioModel: Predictive Framework}
 
 \subsection{Conceptual Foundation}
 We present a cellular automata model for myelination, using biological morphogenesis models and stochastic metabolism. The model integrates redox, endocrine, glial, epigenetic, and systems-level states.
+
+% 6. SPONGE MODEL - Insert AFTER line ~115-118
+% Location: Section 5.1 (BioModel: Conceptual Foundation)
+% INSERT AFTER: "We present a cellular automata model for myelination..."
+% BEFORE Section 5.2 (Core Differential Equations)
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../assets/SpongeModel.png}
+\caption{Computational Sponge Model showing cellular automata simulation of morphogen diffusion and pattern formation in developing neural tissue. This model demonstrates how local perturbations from acetaminophen exposure can propagate to affect global myelination patterns.}
+\label{fig:sponge-model}
+\end{figure}
 
 \subsection{Core Differential Equations}
 We couple multiple biological processes into a unified framework:
@@ -117,12 +193,43 @@ We couple multiple biological processes into a unified framework:
 Here $A$ is fetal APAP burden, $R$ redox stress, $T$ androgen level,
 $O$ OPC pool, $E$ an epigenetic state, and $C$ a connectivity index.
 
+
+
+
 \subsection{Critical Windows and Susceptibility}
 Let $\tau$ be gestational time. Susceptibility peaks when $A(\tau)$ overlaps:
 \begin{itemize}
   \item 8--14 weeks (androgen surge; $\partial T/\partial \tau$ maximal)
   \item Late gestation (gliogenesis/myelination; $\partial O/\partial \tau$ maximal)
 \end{itemize}
+
+% 7. FETAL DEVELOPMENT TIMELINE - Insert AFTER line ~135-140
+% Location: Section 5.3 (Critical Windows and Susceptibility)
+% INSERT AFTER the bullet points about susceptibility windows
+% "    \item Late gestation (gliogenesis/myelination; $\partial O/\partial \tau$ maximal)"
+% "\end{itemize}"
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../assets/fetal-development.png}
+\caption{Timeline of human fetal brain development showing critical periods of vulnerability to acetaminophen exposure. Key developmental processes including neurogenesis, migration, synaptogenesis, and myelination are mapped against gestational weeks, highlighting windows of heightened susceptibility.}
+\label{fig:fetal-development}
+\end{figure}
+
+% 8. FETAL MRI COMPARISON - Also in Section 5.3
+% INSERT immediately after the fetal-development figure
+
+\begin{figure}[h]
+\centering
+\begin{tabular}{cc}
+\includegraphics[width=0.45\textwidth]{../assets/fetal-mri-22wks.webp} &
+\includegraphics[width=0.45\textwidth]{../assets/fetal-mri-32wks.png} \\
+(a) 22 weeks gestation & (b) 32 weeks gestation
+\end{tabular}
+\caption{Fetal MRI images showing progressive myelination between (a) 22 weeks and (b) 32 weeks gestation. Note the dramatic increase in white matter signal intensity reflecting ongoing myelination, a process vulnerable to acetaminophen-induced disruption.}
+\label{fig:fetal-mri-comparison}
+\end{figure}
+
 
 \subsection{Model Predictions}
 \begin{itemize}
@@ -139,8 +246,14 @@ Meta-analyses report OR 1.2-1.5 for ASD/ADHD with prenatal APAP exposure \citep{
 \subsection{Consistency}
 Over 30 epidemiological studies across different populations show similar associations \citep{navarro2025}, including cohorts from Denmark \citep{liew2016}, Norway \citep{ystrom2017}, Spain \citep{avella2016}, New Zealand \citep{thompson2014}, and the Netherlands \citep{vlenterie2016}, with higher-quality studies showing stronger effects \citep{chen2023}.
 
+
+
 \subsection{Specificity}
 Effects are specific to neurodevelopmental outcomes; APAP does not cause general teratogenic effects or major birth defects.
+
+
+
+
 
 \subsection{Temporality}
 Exposure precedes outcome; critical windows identified (first trimester for hormonal effects \citep{kristensen2016}, second trimester for neurodevelopmental programming \citep{avella2016}, third trimester for myelination \citep{liew2021}).

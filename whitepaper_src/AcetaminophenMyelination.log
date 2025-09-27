@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 SEP 2025 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 SEP 2025 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -602,7 +602,6 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 21.
 Package hyperref Info: Link coloring OFF on input line 21.
- (./AcetaminophenMyelination.out) (./AcetaminophenMyelination.out)
 \@outlinefile=\write4
 \openout4 = `AcetaminophenMyelination.out'.
 
@@ -614,110 +613,450 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
+Package natbib Warning: Citation `navarro2025' on page 1 undefined on input line 25.
+
+
 Overfull \hbox (13.15408pt too wide) in paragraph at lines 25--26
 []\OT1/cmr/m/n/10.95 The re-cent HHS an-nounce-ment ac-knowl-edg-ing con-cerns about pre-na-tal ac-etaminophen
  []
+
+
+Package natbib Warning: Citation `kristensen2016' on page 1 undefined on input line 29.
+
+
+Package natbib Warning: Citation `masarwa2018' on page 1 undefined on input line 29.
+
+
+Package natbib Warning: Citation `chen2023' on page 1 undefined on input line 29.
+
+
+Package natbib Warning: Citation `schultz2008' on page 1 undefined on input line 29.
+
+
+Package natbib Warning: Citation `torres2003' on page 1 undefined on input line 29.
+
+
+Package natbib Warning: Citation `shaw2013' on page 1 undefined on input line 29.
+
+
+Package natbib Warning: Citation `parker2020' on page 1 undefined on input line 29.
+
+
+Package natbib Warning: Citation `liew2016' on page 1 undefined on input line 29.
+
+
+Package natbib Warning: Citation `avella2016' on page 1 undefined on input line 29.
+
+
+Package natbib Warning: Citation `navarro2025' on page 1 undefined on input line 37.
 
 
 
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=300, 284.39583pt x 171.64125pt>
-File: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png Graphic file (type png)
-<use ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>
-Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 62.
-(pdftex.def)             Requested size: 375.80544pt x 226.82378pt.
 
+Package natbib Warning: Citation `liew2016' on page 2 undefined on input line 39.
+
+
+Package natbib Warning: Citation `brandlistuen2013' on page 2 undefined on input line 39.
+
+
+Package natbib Warning: Citation `ystrom2017' on page 2 undefined on input line 39.
+
+
+Package natbib Warning: Citation `perez2012' on page 2 undefined on input line 40.
+
+
+Package natbib Warning: Citation `posadas2019' on page 2 undefined on input line 40.
+
+
+Package natbib Warning: Citation `viberg2014' on page 2 undefined on input line 41.
+
+
+Package natbib Warning: Citation `philippot2022' on page 2 undefined on input line 41.
+
+
+Package natbib Warning: Citation `blecharz2018' on page 2 undefined on input line 41.
+
+
+Package natbib Warning: Citation `ji2020' on page 2 undefined on input line 42.
+
+
+Package natbib Warning: Citation `perez2012' on page 2 undefined on input line 46.
+
+
+Package natbib Warning: Citation `kristensen2016' on page 2 undefined on input line 46.
+
+
+LaTeX Warning: Reference `sec:asd-genes' on page 2 undefined on input line 51.
+
+<../assets/Autism-Ideogram.png, id=20, 760.8425pt x 459.7175pt>
+File: ../assets/Autism-Ideogram.png Graphic file (type png)
+<use ../assets/Autism-Ideogram.png>
+Package pdftex.def Info: ../assets/Autism-Ideogram.png  used on input line 68.
+(pdftex.def)             Requested size: 469.75502pt x 283.84343pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=22, 284.39583pt x 171.64125pt>
+File: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png Graphic file (type png)
+<use ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>
+Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 76.
+(pdftex.def)             Requested size: 375.80544pt x 226.82378pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `baker2020' on page 2 undefined on input line 82.
+
+
+Package natbib Warning: Citation `kristensen2016' on page 2 undefined on input line 82.
+
+
+Package natbib Warning: Citation `zhu2021' on page 2 undefined on input line 82.
+
+<../assets/MechanisticPathways.png, id=23, 998.73125pt x 662.475pt>
+File: ../assets/MechanisticPathways.png Graphic file (type png)
+<use ../assets/MechanisticPathways.png>
+Package pdftex.def Info: ../assets/MechanisticPathways.png  used on input line 92.
+(pdftex.def)             Requested size: 422.77664pt x 280.43115pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `parker2020' on page 2 undefined on input line 99.
+
+
+Package natbib Warning: Citation `posadas2019' on page 2 undefined on input line 99.
+
+
+Package natbib Warning: Citation `philippot2022' on page 2 undefined on input line 99.
+
+
+Package natbib Warning: Citation `riffel2020' on page 2 undefined on input line 99.
+
+
+Package natbib Warning: Citation `kristensen2016' on page 2 undefined on input line 102.
+
+
+Package natbib Warning: Citation `bauer2021' on page 2 undefined on input line 102.
+
+
+Package natbib Warning: Citation `liew2016' on page 2 undefined on input line 102.
 
 
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-[3 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Package natbib Warning: Citation `zhu2021' on page 3 undefined on input line 105.
+
+
+Package natbib Warning: Citation `schultz2008' on page 3 undefined on input line 105.
+
+
+Package natbib Warning: Citation `bittker2018' on page 3 undefined on input line 105.
+
+
+Package natbib Warning: Citation `perez2012' on page 3 undefined on input line 108.
+
+
+Package natbib Warning: Citation `blecharz2018' on page 3 undefined on input line 108.
+
+
+Package natbib Warning: Citation `viberg2014' on page 3 undefined on input line 108.
+
+<../assets/GreyWhiteMatter.png, id=36, 1027.84pt x 1027.84pt>
+File: ../assets/GreyWhiteMatter.png Graphic file (type png)
+<use ../assets/GreyWhiteMatter.png>
+Package pdftex.def Info: ../assets/GreyWhiteMatter.png  used on input line 117.
+(pdftex.def)             Requested size: 422.77664pt x 422.7816pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../assets/Myelination-Sankey.png, id=37, 956.57375pt x 301.125pt>
+File: ../assets/Myelination-Sankey.png Graphic file (type png)
+<use ../assets/Myelination-Sankey.png>
+Package pdftex.def Info: ../assets/Myelination-Sankey.png  used on input line 127.
+(pdftex.def)             Requested size: 399.29463pt x 125.69511pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `baker2020' on page 3 undefined on input line 135.
+
+
+Package natbib Warning: Citation `viberg2014' on page 3 undefined on input line 135.
+
+
+Package natbib Warning: Citation `blecharz2018' on page 3 undefined on input line 135.
+
+
+Package natbib Warning: Citation `ji2020' on page 3 undefined on input line 135.
+
+
+
+[3 <../assets/Autism-Ideogram.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
 []|\OT1/cmr/m/n/10.95 Oxidative
  []
 
 
-Overfull \hbox (4.09473pt too wide) in paragraph at lines 93--93
+Overfull \hbox (4.09473pt too wide) in paragraph at lines 145--145
 \OT1/cmr/m/n/10.95 stress/mitochondria| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 []|\OT1/cmr/m/n/10.95 Energy deficits in neu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 \OT1/cmr/m/n/10.95 rons/OPCs; neu-roin-flam-
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 94--94
+Underfull \hbox (badness 2452) in paragraph at lines 146--146
 []|\OT1/cmr/m/n/10.95 Endocrine dis-rup-
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 94--95
+Underfull \hbox (badness 2293) in paragraph at lines 146--147
 []|\OT1/cmr/m/n/10.95 Sex-dimorphic cir-cuit for-ma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
 []|\OT1/cmr/m/n/10.95 Epigenetic re-pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
 []|\OT1/cmr/m/n/10.95 DNA methy-la-tion shifts at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
 []|\OT1/cmr/m/n/10.95 OPC tox-i-c-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
 []|\OT1/cmr/m/n/10.95 Connectome re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 []|\OT1/cmr/m/n/10.95 Attention/social in-te-gra-tion
  []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4]
-Overfull \hbox (4.15256pt too wide) in paragraph at lines 140--141
-\OT1/cmr/m/n/12 Over 30 epi-demi-o-log-i-cal stud-ies across dif-fer-ent pop-u-la-tions show sim-i-lar as-so-ci-a-tions [[]Navarro
- []
+<../assets/nihms-1569306-f0005.jpg, id=48, 473.6094pt x 505.89pt>
+File: ../assets/nihms-1569306-f0005.jpg Graphic file (type jpg)
+<use ../assets/nihms-1569306-f0005.jpg>
+Package pdftex.def Info: ../assets/nihms-1569306-f0005.jpg  used on input line 162.
+(pdftex.def)             Requested size: 399.29463pt x 426.51941pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../assets/SpongeModel.png, id=49, 1541.76pt x 1027.84pt>
+File: ../assets/SpongeModel.png Graphic file (type png)
+<use ../assets/SpongeModel.png>
+Package pdftex.def Info: ../assets/SpongeModel.png  used on input line 179.
+(pdftex.def)             Requested size: 422.77664pt x 281.84917pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[5]
+[4 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
+
+[5 <../assets/MechanisticPathways.png>]
+<../assets/fetal-development.png, id=77, 1541.76pt x 1027.84pt>
+File: ../assets/fetal-development.png Graphic file (type png)
+<use ../assets/fetal-development.png>
+Package pdftex.def Info: ../assets/fetal-development.png  used on input line 214.
+(pdftex.def)             Requested size: 469.75502pt x 313.16924pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+/Volumes/SonicMagic/Code/demylination/acetaminophen-autism-biomodel/whitepaper_src/AcetaminophenMyelination.tex:225: LaTeX Error: Unknown graphics extension: .webp.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 ...extwidth]{../assets/fetal-mri-22wks.webp}
+                                                   &
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<../assets/fetal-mri-32wks.png, id=78, 390.61935pt x 146.10585pt>
+File: ../assets/fetal-mri-32wks.png Graphic file (type png)
+<use ../assets/fetal-mri-32wks.png>
+Package pdftex.def Info: ../assets/fetal-mri-32wks.png  used on input line 226.
+(pdftex.def)             Requested size: 211.38832pt x 79.06764pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `masarwa2018' on page 6 undefined on input line 244.
+
+
+Package natbib Warning: Citation `liew2014' on page 6 undefined on input line 244.
+
+
+Package natbib Warning: Citation `thompson2014' on page 6 undefined on input line 244.
+
+
+Package natbib Warning: Citation `navarro2025' on page 6 undefined on input line 247.
+
+
+Package natbib Warning: Citation `liew2016' on page 6 undefined on input line 247.
+
+
+Package natbib Warning: Citation `ystrom2017' on page 6 undefined on input line 247.
+
+
+Package natbib Warning: Citation `avella2016' on page 6 undefined on input line 247.
+
+
+Package natbib Warning: Citation `thompson2014' on page 6 undefined on input line 247.
+
+
+Package natbib Warning: Citation `vlenterie2016' on page 6 undefined on input line 247.
+
+
+Package natbib Warning: Citation `chen2023' on page 6 undefined on input line 247.
+
+
 
 [6]
 
+Package natbib Warning: Citation `kristensen2016' on page 7 undefined on input line 259.
+
+
+Package natbib Warning: Citation `avella2016' on page 7 undefined on input line 259.
+
+
+Package natbib Warning: Citation `liew2021' on page 7 undefined on input line 259.
+
+
+Package natbib Warning: Citation `liew2014' on page 7 undefined on input line 262.
+
+
+Package natbib Warning: Citation `brandlistuen2013' on page 7 undefined on input line 262.
+
+
+Package natbib Warning: Citation `ji2020' on page 7 undefined on input line 262.
+
+
+Package natbib Warning: Citation `bauer2021' on page 7 undefined on input line 265.
+
+
+Package natbib Warning: Citation `parker2020' on page 7 undefined on input line 265.
+
+
+Package natbib Warning: Citation `kristensen2016' on page 7 undefined on input line 265.
+
+
+Package natbib Warning: Citation `perez2012' on page 7 undefined on input line 265.
+
+
+Package natbib Warning: Citation `zhu2021' on page 7 undefined on input line 265.
+
+
+Package natbib Warning: Citation `viberg2014' on page 7 undefined on input line 271.
+
+
+Package natbib Warning: Citation `philippot2022' on page 7 undefined on input line 271.
+
+
+Package natbib Warning: Citation `blecharz2018' on page 7 undefined on input line 271.
+
+
+Package natbib Warning: Citation `brandlistuen2013' on page 7 undefined on input line 271.
+
+
+Package natbib Warning: Citation `stergiakouli2016' on page 7 undefined on input line 271.
+
+
+
 [7]
-Overfull \hbox (0.60475pt too wide) in paragraph at lines 211--211
-[]\OT1/cmr/bx/n/17.28 Technical Ap-pendix: De-tailed Math-e-mat-i-cal Frame-
- []
+
+Package natbib Warning: Citation `navarro2025' on page 8 undefined on input line 296.
+
+
+Package natbib Warning: Citation `bauer2021' on page 8 undefined on input line 296.
+
+
+Package natbib Warning: Citation `bauer2021' on page 8 undefined on input line 296.
+
+
+Package natbib Warning: Citation `bauer2021' on page 8 undefined on input line 299.
+
+
+Package natbib Warning: Citation `masarwa2018' on page 8 undefined on input line 301.
+
+
+Package natbib Warning: Citation `shaw2013' on page 8 undefined on input line 304.
+
+
+Package natbib Warning: Citation `ji2020' on page 8 undefined on input line 310.
+
+
+Package natbib Warning: Citation `baker2020' on page 8 undefined on input line 311.
+
+
+Package natbib Warning: Citation `leppert2019' on page 8 undefined on input line 312.
+
+
+Package natbib Warning: Citation `schultz2008' on page 8 undefined on input line 312.
+
+
+Package natbib Warning: Citation `parker2020' on page 8 undefined on input line 313.
+
+
+Package natbib Warning: Citation `vlenterie2016' on page 8 undefined on input line 314.
 
 
 
 [8]
 
+Package natbib Warning: Citation `leppert2019' on page 9 undefined on input line 318.
+
+
+Package natbib Warning: Citation `perez2012' on page 9 undefined on input line 318.
+
+
+Package natbib Warning: Citation `brandlistuen2013' on page 9 undefined on input line 318.
+
+
+Package natbib Warning: Citation `stergiakouli2016' on page 9 undefined on input line 318.
+
+
+Package natbib Warning: Citation `bauer2021' on page 9 undefined on input line 321.
+
+
+Package natbib Warning: Citation `navarro2025' on page 9 undefined on input line 321.
+
+
+Package natbib Warning: Citation `masarwa2018' on page 9 undefined on input line 321.
+
+
+Overfull \hbox (0.60475pt too wide) in paragraph at lines 324--324
+[]\OT1/cmr/bx/n/17.28 Technical Ap-pendix: De-tailed Math-e-mat-i-cal Frame-
+ []
+
+
+
 [9]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 
 [10]
 
@@ -728,7 +1067,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [11]
 
 [12]
-Overfull \hbox (13.647pt too wide) in paragraph at lines 441--442
+Overfull \hbox (13.647pt too wide) in paragraph at lines 554--555
 \OT1/cmr/m/n/12 Several ASD risk genes are in-volved in path-ways po-ten-tially af-fected by pre-na-tal ac-etaminophen: 
  []
 
@@ -740,27 +1079,61 @@ Overfull \hbox (13.647pt too wide) in paragraph at lines 441--442
 
 [15]
 
-[16] (./AcetaminophenMyelination.aux)
+[16]
+
+Package natbib Warning: There were undefined citations.
+
+
+
+[17]
+
+[18 <../assets/GreyWhiteMatter.png (PNG copy)>]
+
+[19 <../assets/Myelination-Sankey.png>]
+
+[20 <../assets/nihms-1569306-f0005.jpg>]
+
+[21 <../assets/SpongeModel.png (PNG copy)>]
+
+[22 <../assets/fetal-development.png (PNG copy)> <../assets/fetal-mri-32wks.png>] (./AcetaminophenMyelination.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `AcetaminophenMyelination.out' has not changed.
-(rerunfilecheck)             Checksum: 6387C855477D20F994A60285AAFE72F6;9550.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `AcetaminophenMyelination.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `AcetaminophenMyelination.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  6387C855477D20F994A60285AAFE72F6;9550.
  ) 
 Here is how much of TeX's memory you used:
- 25758 strings out of 473190
- 525985 string characters out of 5715801
- 876238 words of memory out of 5000000
- 48494 multiletter control sequences out of 15000+600000
+ 25805 strings out of 473190
+ 528572 string characters out of 5715801
+ 877844 words of memory out of 5000000
+ 48531 multiletter control sequences out of 15000+600000
  570761 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,91p,954b,1182s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,13n,91p,963b,1189s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on AcetaminophenMyelination.pdf (16 pages, 546824 bytes).
+Output written on AcetaminophenMyelination.pdf (22 pages, 7343299 bytes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
- 627 compressed objects within 7 object streams
- 152 named destinations out of 1000 (max. 500000)
- 466 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 362 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 166 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
