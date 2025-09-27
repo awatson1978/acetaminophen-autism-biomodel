@@ -119,26 +119,32 @@ Human fMRI studies find weaker frontoparietal connectivity in exposed children \
     width=0.8\textwidth,
     height=6cm
 ]
-% Normal myelination
+% Normal female pattern (broader response)
 \addplot[blue, thick] coordinates {
-    (0,0.3) (5,0.7) (10,0.9) (20,0.95) (30,0.9) (50,0.8) (70,0.6) (100,0.4)
+    (0,0.4) (5,0.6) (10,0.75) (20,0.85) (30,0.82) (40,0.75) (50,0.65) (70,0.5) (100,0.3)
 };
-\addlegendentry{Normal}
+\addlegendentry{Female (normal)}
 
-% Hypomyelination
+% Normal male pattern (narrow, peaked)
+\addplot[green, thick] coordinates {
+    (0,0.2) (5,0.4) (10,0.8) (15,0.95) (20,1.0) (25,0.95) (30,0.7) (40,0.4) (50,0.25) (70,0.15) (100,0.1)
+};
+\addlegendentry{Male (normal)}
+
+% APAP-exposed male (hypomyelinated + feminized)
 \addplot[red, thick, dashed] coordinates {
-    (0,0.5) (5,0.8) (10,0.85) (20,0.7) (30,0.4) (50,0.2) (70,0.1) (100,0.05)
+    (0,0.35) (5,0.5) (10,0.6) (20,0.65) (30,0.6) (40,0.5) (50,0.4) (70,0.25) (100,0.15)
 };
-\addlegendentry{Hypomyelinated}
+\addlegendentry{Male + APAP}
 
-% Male pattern
-\addplot[green, thick, dotted] coordinates {
-    (0,0.2) (5,0.4) (10,0.8) (20,1.0) (30,0.7) (50,0.3) (70,0.15) (100,0.1)
+% Severe APAP exposure
+\addplot[orange, thick, dotted] coordinates {
+    (0,0.4) (5,0.45) (10,0.48) (20,0.45) (30,0.35) (40,0.25) (50,0.15) (70,0.1) (100,0.05)
 };
-\addlegendentry{Male variant}
+\addlegendentry{Severe exposure}
 \end{axis}
 \end{tikzpicture}
-\caption{Frequency-dependent transmission efficiency in normal, hypomyelinated, and male-pattern myelination. Note the selective loss of high-frequency transmission with preserved low-frequency conduction.}
+\caption{Frequency-dependent transmission efficiency showing sex differences and APAP effects. Normal males show narrow, peaked response (hypermyelinated). APAP exposure causes both hypomyelination (reduced peak) and feminization (broadened response). Note preserved low-frequency transmission despite high-frequency impairment.}
 \label{fig:frequency}
 \end{figure}
 
