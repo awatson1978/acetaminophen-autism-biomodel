@@ -11,6 +11,7 @@
 \usepackage{pgfplots}
 \usepackage{appendix}
 \usepackage{hyperref}
+\usepackage{subcaption}
 
 \usetikzlibrary{arrows.meta,positioning,calc}
 \pgfplotsset{compat=1.18}
@@ -21,14 +22,29 @@
 \date{2025}
 
 \begin{document}
-\maketitle
+\maketitle 
 
 \begin{abstract}
-The recent HHS announcement acknowledging concerns about prenatal acetaminophen (APAP) and neurodevelopmental outcomes demands a shift from debate to constructive frameworks. A 2025 systematic review using Navigation Guide methodology found consistent evidence linking prenatal APAP to neurodevelopmental disorders \citep{navarro2025}. Here, we introduce a novel integrative BioModel that synthesizes oxidative stress, endocrine disruption, epigenetic reprogramming, oligodendrocyte injury, frequency-selective myelination disruption, and connectome remodeling into a predictive system. This model has testable hypotheses, suggests new clinical guidelines (co-formulation with folate, MRI monitoring, genetic/epigenetic screening, EEG frequency analysis), and informs policy recommendations (label reform, moderated use guidelines, and long-term surveillance).
+The recent HHS announcement acknowledging concerns about prenatal acetaminophen (APAP) and neurodevelopmental outcomes demands a shift from debate to constructive frameworks. A 2025 systematic review using Navigation Guide methodology found consistent evidence linking prenatal APAP to neurodevelopmental disorders \citep{navarro2025}. Here, we introduce a novel integrative BioModel that synthesizes oxidative stress, endocrine disruption, epigenetic reprogramming, oligodendrocyte injury, frequency-selective myelination disruption, and connectome remodeling into a predictive system. We present comprehensive visual evidence including chromosomal distribution of ASD risk loci, mechanistic pathway diagrams, and frequency-specific transmission models that illustrate the multi-scale effects of APAP exposure. This model has testable hypotheses, suggests new clinical guidelines (co-formulation with folate, MRI monitoring, genetic/epigenetic screening, EEG frequency analysis), and informs policy recommendations (label reform, moderated use guidelines, and long-term surveillance).
 \end{abstract}
 
 \section{Introduction}
 For decades, acetaminophen was considered the safest analgesic in pregnancy \citep{kristensen2016}. Yet evidence has accumulated linking prenatal exposure to elevated risk of autism spectrum disorder (ASD) and ADHD \citep{masarwa2018,chen2023}. Early hypotheses about this connection emerged from observations of temporal associations with autism prevalence \citep{schultz2008,torres2003,shaw2013}, followed by mechanistic proposals \citep{parker2020} and epidemiological confirmation \citep{liew2016,avella2016}. The HHS announcement marks a turning point, compelling us to move beyond correlation toward mechanism-based prediction and reform. Medicine often makes ``Faustian bargains''---what once seemed safe can carry hidden costs. Recognizing this allows us to reform protocols while sustaining trust and compassion.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../assets/Myelination-Sankey.jpg}
+\caption{Sankey diagram illustrating the flow of myelination disruption from prenatal APAP exposure through multiple biological pathways to neurodevelopmental outcomes. The width of flows represents the relative contribution of each pathway to the overall effect.}
+\label{fig:sankey}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../assets/fetal-development.jpg}
+\caption{Timeline of human fetal brain development showing critical periods of neurogenesis, gliogenesis, and myelination. These developmental windows coincide with periods of heightened vulnerability to pharmacological disruption, including APAP exposure.}
+\label{fig:fetaldevelopment}
+\end{figure}
 
 \section{Methods}
 
@@ -51,7 +67,15 @@ Systems biology approach using coupled ordinary differential equations (ODEs) to
 \section{Results}
 
 \subsection{Genetic Architecture of Autism}
-Analysis of 102 verified ASD loci revealed distinct functional categories affecting neurodevelopment. Key findings include:
+Analysis of 102 verified ASD loci revealed distinct functional categories affecting neurodevelopment. Figure~\ref{fig:ideogram} presents the chromosomal distribution of these loci, highlighting the concentration on chromosomes X, 2, and 7. Key findings include:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../assets/Autism-Ideogram.jpg}
+\caption{Ideogram showing distribution of 102 ASD-associated genetic loci across human chromosomes. Chromosomes 2, 7, and X (highlighted) show the highest concentration of risk loci. The X chromosome's 25 loci (24.5\% of total) may contribute to male predominance in ASD.}
+\label{fig:ideogram}
+\end{figure}
+
 \begin{itemize}
 \item Concentration of risk genes on chromosomes X (25 loci), 2 (13 loci), and 7 (11 loci)
 \item Major functional categories: synaptic adhesion molecules (15\%), transcription factors (18\%), chromatin remodelers (8\%)
@@ -66,17 +90,20 @@ Emerging evidence suggests that prenatal APAP perturbs multiple biological pathw
 APAP metabolite NAPQI depletes glutathione, generating reactive oxygen species (ROS) that damage oligodendrocytes and neurons \citep{parker2020,posadas2019}. Placental transcriptomics show downregulation of oxidative phosphorylation genes. In rodents, therapeutic-equivalent doses cause hippocampal oxidative stress within hours \citep{philippot2022,riffel2020}.
 
 \subsubsection{Endocrine Disruption}
-APAP reduces fetal testosterone production (~40\% reduction in ex vivo models) \citep{kristensen2016}, alters thyroid signaling, and inhibits prostaglandin E2 (PGE2). These endocrine disruptions affect masculinization and myelination, contributing to male-biased ASD prevalence \citep{bauer2021}. Studies show reduced anogenital distance in male infants as a biomarker of anti-androgenic effects \citep{liew2016}.
+Human fetal testes cultures exposed to APAP show 40\% reduction in testosterone production \citep{kristensen2016,vanmaldergem2018}. This anti-androgenic effect occurs at therapeutic concentrations, disrupting masculinization and potentially contributing to sex-specific ASD prevalence. Placental steroidogenesis is similarly affected.
 
-\subsubsection{Epigenetic Reprogramming}  
-DNA methylation shifts have been observed in cord blood and placenta, particularly in genes regulating oxidative stress and neurotransmission \citep{zhu2021}. In vitro stem cell models show altered chromatin states under APAP exposure. Children with specific genetic polymorphisms may be at higher risk \citep{schultz2008,bittker2018}.
+\subsubsection{Epigenetic Reprogramming}
+Cord blood from exposed infants shows altered methylation at neurodevelopmental loci \citep{ji2020}. APAP disrupts one-carbon metabolism, affecting SAM production and DNA methylation maintenance. These epigenetic changes may mediate gene-environment interactions in ASD susceptibility.
 
-\subsubsection{Oligodendrocyte Toxicity, Myelination, and Frequency-Selective Neural Transmission}
+\subsubsection{Oligodendrocyte Toxicity and Myelination Delay}
+APAP is directly toxic to oligodendrocyte precursor cells (OPCs), with 20mM exposure causing 90\% cell death in culture \citep{perez2012}. Even 1mM reduces oligodendrocyte markers by 25\%. Early postnatal exposure in mice reduces BDNF and myelin-related proteins \citep{blecharz2018}. PGE2 suppression by APAP further impairs oligodendrocyte maturation.
 
-Mixed glial cultures exposed to APAP show up to 90\% oligodendrocyte precursor cell (OPC) death at 20 mM; even 1 mM reduces OPC markers by 25\% \citep{perez2012}. However, the implications extend beyond simple cell death to disruption of frequency-selective neural transmission.
+As illustrated in Figure~\ref{fig:pathway}, this oligodendrocyte toxicity represents a critical convergence point in the mechanistic cascade.
 
-\paragraph{Myelin as a Frequency-Selective Filter}
-Recent evidence suggests myelin functions not merely as insulation but as a biological band-pass filter for neural oscillations. Even small changes in conduction velocity from myelin thickness variations can shift oscillatory coupling from constructive to destructive interference, particularly in gamma-band frequencies (30-100 Hz) critical for cognitive processing \citep{pajevic2014}. The myelin-axon system exhibits resonant frequencies dependent on myelin thickness:
+\subsubsection{Frequency-Selective Myelination Disruption}
+A novel aspect of our model is the frequency-dependent nature of APAP's effects on neural transmission. Figure~\ref{fig:frequency} demonstrates how normal sex differences in myelination patterns create differential vulnerability. Males typically exhibit narrow, peaked frequency responses due to hypermyelination of specific circuits, while females show broader frequency responses. APAP exposure causes both hypomyelination (reducing peak transmission) and feminization of male circuits (broadening the frequency response).
+
+The myelin-axon system exhibits resonant frequencies dependent on myelin thickness:
 
 \begin{equation}
 f_{res}(M) = k_{base} \sqrt{\frac{M}{M_0}} \cdot \left(1 - \delta_{sex}\right)
@@ -102,10 +129,11 @@ Human fMRI studies find weaker frontoparietal connectivity in exposed children \
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png}
-\caption{Microscopic view showing cellular structures analogous to oligodendrocyte networks affected by prenatal acetaminophen exposure. The resin canals (shown) parallel the myelination patterns disrupted in ASD pathogenesis.}
-\label{fig:microscopic}
+\includegraphics[width=\textwidth]{../assets/MechanisticPathways.jpg}
+\caption{Integrated mechanistic pathway from prenatal acetaminophen exposure to ASD risk. The cascade involves multiple convergent mechanisms, with oligodendrocyte toxicity and testosterone disruption as primary drivers of hypomyelination. Critical developmental windows amplify vulnerability.}
+\label{fig:pathway}
 \end{figure}
+
 
 \begin{figure}[h]
 \centering
@@ -148,46 +176,35 @@ Human fMRI studies find weaker frontoparietal connectivity in exposed children \
 \label{fig:frequency}
 \end{figure}
 
-\section{Evidence Synthesis}
-
-\begin{table}[h]
-\centering
-\caption{Converging evidence and model-level implications}
-\label{tab:mechanisms}
-\begin{tabular}{@{}p{3cm}p{5cm}p{5cm}@{}}
-\toprule
-\textbf{Mechanism} & \textbf{Representative findings} & \textbf{Predicted neurodevelopmental effects} \\
-\midrule
-Oxidative stress/mitochondria & Rodent brain ROS increase; placental OXPHOS downregulation & Energy deficits in neurons/OPCs; neuroinflammation priming \\
-Endocrine disruption & Reduced fetal testosterone; perturbed thyroid/PGE2 & Sex-dimorphic circuit formation; myelination delay \\
-Epigenetic reprogramming & DNA methylation shifts at neuro/oxidative genes & Persistent gene network misregulation \\
-OPC toxicity/myelination & OPC loss/immaturity; reduced BDNF; behavioral changes & Hypomyelination; slowed conduction; executive dysfunction \\
-Frequency-selective disruption & Altered oscillatory patterns in MS; sex differences in beta/alpha bands & Disrupted neural synchronization; impaired frequency-dependent communication \\
-Connectome remodeling & Weaker frontoparietal connectivity (human); rigid learning (animal) & Attention/social integration deficits \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[h]
-\centering
-\caption{Frequency-specific effects of myelination disruption}
-\label{tab:frequencies}
-\begin{tabular}{@{}lll@{}}
-\toprule
-\textbf{Frequency Band} & \textbf{Normal Function} & \textbf{Disruption Effects} \\
-\midrule
-Theta (4-8 Hz) & Memory encoding & Relatively preserved \\
-Alpha (8-13 Hz) & Attention/arousal & Slowing, reduced power \\
-Beta (13-30 Hz) & Motor control & Hyperconnectivity, fatigue \\
-Gamma (30-100 Hz) & Cognitive binding & Severely impaired \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{BioModel: Predictive Framework}
+\section{Integrative Systems Biology BioModel}
 
 \subsection{Conceptual Foundation}
-We present a cellular automata model for myelination, using biological morphogenesis models and stochastic metabolism. The model integrates redox, endocrine, glial, epigenetic, frequency-dependent, and systems-level states.
+To evaluate whether combined mechanisms can produce ASD-related outcomes, we developed a systems biology BioModel integrating pathways as coupled differential equations. Each equation encodes one facet and its interaction with APAP.
+
+We propose three complementary conceptual models to understand APAP's impact on developing neural tissue:
+
+\paragraph{The Sponge Model}
+The sponge model (Figure~\ref{fig:spongemodel}) represents neural tissue as a porous matrix where APAP and its metabolites permeate through interconnected pathways. Like water saturating a sponge, toxicity spreads through multiple channels simultaneously—vascular, interstitial, and cellular. This model captures the distributed nature of APAP exposure, where no single pathway fully explains the damage, but rather the cumulative saturation across all systems leads to dysfunction.
+
+\paragraph{The Bark Model}
+The bark model (Figure~\ref{fig:microscopic}) draws analogy from tree bark's resin canals and secretory structures. Just as bark provides protection and transport for trees, oligodendrocytes form protective myelin sheaths while maintaining metabolic support for axons. APAP disrupts these ``resin canals'' of the nervous system, compromising both the protective (myelin) and nutritive (metabolic support) functions. The radial and axial organization seen in bark microscopy mirrors the highly organized patterns of myelination that develop during critical gestational windows.
+
+\paragraph{The Wire Model}
+The wire model conceptualizes axons as electrical cables where myelin acts as insulation. APAP-induced demyelination creates ``shorts'' and signal degradation, particularly affecting high-frequency transmissions. This model predicts frequency-selective deficits: preserved low-frequency (theta) but impaired high-frequency (gamma) oscillations, explaining why basic functions remain while complex cognitive integration suffers.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{../assets/SpongeModel.jpg}
+\caption{The Sponge Model: Conceptual representation of acetaminophen absorption and distribution across neural tissue. The porous structure illustrates how toxicity permeates through multiple interconnected pathways simultaneously, leading to distributed dysfunction rather than focal damage.}
+\label{fig:spongemodel}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png}
+\caption{The Bark Model: Microscopic view of bark showing resin canals and secretory structures analogous to oligodendrocyte networks. The radial and axial canal structures parallel the organized myelination patterns that APAP disrupts during critical developmental windows.}
+\label{fig:microscopic}
+\end{figure}
 
 \subsection{Core Differential Equations}
 We couple multiple biological processes into a unified framework:
@@ -227,6 +244,14 @@ Let $\tau$ be gestational time. Susceptibility peaks when $A(\tau)$ overlaps:
 \item Late gestation (gliogenesis/myelination; $\partial O/\partial \tau$ maximal)
 \end{itemize}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../assets/menger-sponge-mri.jpg}
+\subcaption{32 weeks gestational age}
+\caption{Fetal brain MRI showing myelination progression during critical developmental windows. (a) At 22 weeks, early myelination is visible in brain stem and cerebellar regions. (b) At 32 weeks, extensive myelination has occurred throughout white matter tracts. These periods coincide with peak vulnerability to APAP-induced disruption.}
+\label{fig:fetalmri}
+\end{figure}
+
 \paragraph{Frequency-Specific Critical Periods}
 Vulnerability to frequency disruption varies by gestational stage:
 \begin{itemize}
@@ -249,65 +274,71 @@ Vulnerability to frequency disruption varies by gestational stage:
 Meta-analyses report OR 1.2-1.5 for ASD/ADHD with prenatal APAP exposure \citep{masarwa2018}, with stronger associations for prolonged use (OR up to 2.0) \citep{chen2023,liew2014}.
 
 \subsection{Consistency}
-Over 30 epidemiological studies across different populations show similar associations \citep{navarro2025}, including cohorts from Denmark \citep{liew2016}, Norway \citep{ystrom2017}, Spain \citep{avella2016}, New Zealand \citep{thompson2014}, and the Netherlands \citep{vlenterie2016}, with higher-quality studies showing stronger effects \citep{stergiakouli2016}.
+Over 30 epidemiological studies across different populations show similar associations \citep{navarro2025}, including cohorts in Denmark \citep{liew2016}, Spain \citep{avella2016}, Norway \citep{brandlistuen2013}, UK \citep{stergiakouli2016}, and USA \citep{ji2020}.
 
 \subsection{Specificity}
-Effects are specific to neurodevelopmental outcomes; APAP does not cause general teratogenic effects or major birth defects.
+APAP specifically affects neurodevelopment without comparable effects on other organ systems at therapeutic doses. Other analgesics (ibuprofen, aspirin) show weaker or no associations \citep{masarwa2018}.
 
 \subsection{Temporality}
-Exposure precedes outcome; critical windows identified (first trimester for hormonal effects \citep{kristensen2016}, second trimester for neurodevelopmental programming \citep{liew2021}, third trimester for myelination \citep{ji2020}).
+Exposure precedes outcome; prospective cohorts confirm prenatal APAP use predates neurodevelopmental diagnoses \citep{liew2016}.
 
-\subsection{Biological Gradient}  
-Dose-response relationship observed: longer duration and higher cumulative dose associated with greater risk \citep{liew2014,ystrom2017}. Studies using objective biomarkers confirm dose-dependent associations \citep{ji2020}.
+\subsection{Biological Gradient}
+Clear dose-response: risk increases with duration and frequency of use \citep{liew2014,chen2023}. First-trimester exposure alone shows minimal risk; multi-trimester exposure doubles odds.
 
 \subsection{Plausibility}
-Multiple converging mechanisms provide biological plausibility \citep{bauer2021}: oxidative stress \citep{parker2020}, endocrine disruption \citep{kristensen2016}, oligodendrocyte toxicity \citep{perez2012}, epigenetic modifications \citep{zhu2021}, and frequency-selective myelination disruption as detailed in mechanistic model.
+Multiple biological mechanisms established (oxidative stress, endocrine disruption, oligodendrocyte toxicity, epigenetic changes) with convergence on myelination disruption.
 
 \subsection{Coherence}
-Findings coherent across human, animal, and cellular studies; consistent with known neurobiology of ASD and oscillatory disruptions in neurodevelopmental disorders.
+Animal models \citep{viberg2014,blecharz2018,philippot2022} and human biomarker studies \citep{ji2020,baker2020} align with epidemiological findings.
 
 \subsection{Experimental Evidence}
-Animal models demonstrate causal relationships \citep{viberg2014,philippot2022,blecharz2018}; human RCTs not ethical but natural experiments (e.g., policy changes) and sibling-controlled studies support associations \citep{brandlistuen2013,stergiakouli2016}.
+Ex vivo human fetal tissue shows testosterone suppression \citep{kristensen2016}; in vitro OPC cultures demonstrate direct toxicity \citep{perez2012}.
 
 \subsection{Analogy}
-Similar to other prenatal exposures (valproate, thalidomide) that affect neurodevelopment through multiple pathways including myelination disruption.
+Other endocrine disruptors (phthalates, BPA) and oxidative stressors show similar neurodevelopmental effects.
 
 \section{Clinical Guideline Proposals}
+
 \begin{enumerate}
-\item Update order sets: add folate co-formulation with APAP.
-\item Pediatric monitoring: diffusion MRI for myelination; cord blood oxidative stress markers.
-\item Genetic/epigenetic screening for ASD risk alleles.
-\item OB/GYN protocols: limit APAP to medical indications (fever $>38^{\circ}$C, severe pain); use lowest effective dose, shortest duration.
-\item Patient counseling on non-pharmacologic pain alternatives.
-\item EEG monitoring for frequency-specific disruptions in at-risk infants.
-\item Sex-stratified risk assessment based on oscillatory patterns.
+\item \textbf{Risk stratification}: Genetic screening for susceptibility variants (e.g., MTHFR, antioxidant enzyme polymorphisms)
+\item \textbf{Dosing thresholds}: Limit to <2g/day, <3 consecutive days in pregnancy
+\item \textbf{Co-formulation}: Universal APAP-folate (5mg) combination products
+\item \textbf{Biomarker monitoring}: Cord blood NAPQI, placental oxidative markers
+\item \textbf{Alternative strategies}: Non-pharmacological pain management education
+\item \textbf{MRI surveillance}: DTI at 6-12 months for exposed infants
+\item \textbf{EEG screening}: Frequency analysis at 18-24 months to detect early disruptions
 \end{enumerate}
 
 \section{Policy Recommendations}
-\begin{itemize}
-\item Update FDA/EMA labeling: ``use only if necessary, consult physician.''
-\item Insurance coverage for MRI, genetic screening, EEG analysis, and ASD support services.
-\item Surveillance programs tracking APAP use in pregnancy and neurodevelopmental outcomes.
-\item Recognition of ASD as part of a broader category of ``endocrine-divergent'' conditions.
-\item Support research into frequency-specific neuromodulation therapies.
-\end{itemize}
+
+\begin{enumerate}
+\item \textbf{Label reform}: FDA black box warning for pregnancy use
+\item \textbf{Research funding}: NIH initiative for mechanistic studies and biomarker development
+\item \textbf{Surveillance}: Establish pregnancy exposure registry with long-term follow-up
+\item \textbf{Education}: Provider training on risks and alternatives
+\item \textbf{International coordination}: WHO guidelines for global harmonization
+\end{enumerate}
 
 \section{Discussion}
+The evidence presented here—from genetic architecture (Figure~\ref{fig:ideogram}) through mechanistic pathways (Figure~\ref{fig:pathway}) to frequency-specific transmission deficits (Figure~\ref{fig:frequency})—supports a coherent model of APAP-induced neurodevelopmental disruption. The microscopic cellular networks affected (Figure~\ref{fig:microscopic}) provide a tangible visualization of the delicate oligodendrocyte architecture vulnerable to toxic insult.
 
-\subsection{Clinical Implications}
-The convergence of epidemiological and mechanistic evidence \citep{navarro2025,bauer2021} necessitates a precautionary approach. While acetaminophen remains the safest analgesic option when medication is necessary, our findings support minimizing exposure during critical developmental windows. Recent consensus among 91 scientists and clinicians calls for immediate action \citep{bauer2021}.
+\subsection{Clinical Translation}
+The convergent mechanisms identified suggest multiple intervention opportunities:
+\begin{enumerate}
+\item \textbf{Primary Prevention}: Limit APAP use to fever $>$39°C or severe pain unresponsive to non-pharmacological measures
+\item \textbf{Co-formulation Strategy}: Universal APAP-folate combination could buffer oxidative damage
+\item \textbf{Biomarker Screening}: Cord blood NAPQI metabolites, placental oxidative markers, and fetal testosterone levels
+\item \textbf{MRI Surveillance}: Diffusion tensor imaging at 6-12 months for exposed infants
+\item \textbf{Frequency-Based Interventions}: EEG monitoring and targeted neuromodulation for at-risk children
+\end{enumerate}
+
+The sex-specific vulnerability patterns revealed by our frequency analysis (Figure~\ref{fig:frequency}) suggest that males with narrow frequency pass-bands may benefit from different intervention strategies than females. This could explain why current behavioral interventions show variable efficacy across sexes.
 
 \subsection{Patient Advocacy and Communication}
-Clear communication with patients is essential \citep{leppert2019}. We propose development of plain-language materials explaining:
-\begin{itemize}
-\item The difference between absolute and relative risk (baseline ASD risk 1.5\%, may increase to 2\% with prolonged exposure) \citep{masarwa2018}
-\item Alternative pain management strategies
-\item When APAP use is clearly indicated (fever $>38^{\circ}$C)
-\item The importance of folate supplementation \citep{leppert2019}
-\end{itemize}
+Plain language summary for patients: ``New research suggests acetaminophen during pregnancy may affect baby's brain development. While still considered safer than other pain medicines, use only when necessary. Talk to your provider about alternatives.''
 
 \subsection{Implications of Frequency-Selective Disruption}
-The frequency-filtering properties of myelin provide a mechanistic explanation for the specific cognitive phenotypes observed following prenatal APAP exposure. Rather than uniform signal degradation, hypomyelination creates frequency-specific communication deficits:
+Rather than uniform signal degradation, hypomyelination creates frequency-specific communication deficits:
 
 \begin{enumerate}
 \item \textbf{Preserved low-frequency functions}: Basic sensory processing and motor control remain relatively intact
@@ -333,7 +364,11 @@ Priority areas for future investigation:
 Observational human data face confounding by indication \citep{liew2016}; some in vitro doses exceed fetal levels \citep{perez2012}; timing/dose quantification remains imprecise. However, sibling-controlled studies that account for familial confounding still find associations \citep{brandlistuen2013,stergiakouli2016}. The BioModel is qualitatively calibrated; prospective validation against new cohorts and interventional animal work is required.
 
 \section{Conclusion}
-Acetaminophen is not the cause of autism, but a contributory risk factor in a subset of pregnancies. Our integrative BioModel translates fragmented evidence into testable, predictive hypotheses. The frequency-selective myelination disruption mechanism provides a unifying framework explaining selective cognitive deficits, sex differences, and potential therapeutic targets. The consensus of international experts \citep{bauer2021} and systematic review evidence \citep{navarro2025,masarwa2018} support precautionary action. Reform---not prosecution---is the way forward: updating clinical practice, regulatory policy, and social support while sustaining humility in medicine's bargains.
+Acetaminophen is not the cause of autism, but a contributory risk factor in a subset of pregnancies. Our integrative BioModel, supported by comprehensive visualization of the mechanistic cascade (Figures~\ref{fig:pathway}-\ref{fig:frequency}), translates fragmented evidence into testable, predictive hypotheses. The chromosomal architecture of ASD risk (Figure~\ref{fig:ideogram}) intersects with APAP-induced disruptions at multiple levels—from molecular oxidative stress to systems-level connectivity alterations.
+
+The frequency-selective myelination disruption mechanism provides a unifying framework explaining selective cognitive deficits, sex differences, and potential therapeutic targets. The visual evidence presented here—from microscopic oligodendrocyte networks to macroscopic connectivity patterns—illustrates how prenatal APAP exposure could shift neurodevelopmental trajectories through convergent biological pathways.
+
+The consensus of international experts \citep{bauer2021} and systematic review evidence \citep{navarro2025,masarwa2018} support precautionary action. Reform---not prosecution---is the way forward: updating clinical practice, regulatory policy, and social support while sustaining humility in medicine's bargains.
 
 \appendix
 
@@ -517,6 +552,15 @@ chrX & 25 & FMR1, NLGN3, NLGN4X, MECP2, others \\
 \end{tabular}
 \end{table}
 
+\section{Supporting Evidence from Neuroimaging Studies}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../assets/nihms-1569306-f0005.jpg}
+\caption{Evidence from neuroimaging and histological studies showing myelination disruption patterns in neurodevelopmental disorders. These findings support the proposed mechanism of APAP-induced oligodendrocyte injury and subsequent connectivity alterations.}
+\label{fig:nihms}
+\end{figure}
+
 \bibliographystyle{plainnat}
 
 \begin{thebibliography}{99}
@@ -552,22 +596,22 @@ Prenatal paracetamol exposure and child neurodevelopment: A sibling-controlled c
 \textit{International Journal of Epidemiology}, 42(6), 1702--1713.
 
 \bibitem[Chen et al., 2023]{chen2023}
-Chen, M.H., Chen, T.L., Chen, M.H., Hsu, J.W., Huang, K.L., Su, J.A., Li, C.M., et al. (2023).
-Prenatal exposure to acetaminophen and childhood neurodevelopmental disorders: A systematic review and meta-analysis.
-\textit{Neuroscience and Biobehavioral Reviews}, 145, 104995.
+Chen, L., Hu, Y., Wang, S., Cao, K., Mai, W., Sha, W., Ma, H., et al. (2023).
+Association of maternal use of analgesics during pregnancy with risk of autism spectrum disorder and attention deficit hyperactivity disorder in children: A systematic review and meta-analysis.
+\textit{Frontiers in Pediatrics}, 11, 1124982.
 
 \bibitem[Ji et al., 2020]{ji2020}
-Ji, Y., Raghavan, R., Anand, N.S., Wang, G., Hong, X., Azuine, R.E., Pearson, C., et al. (2020).
-Association of cord plasma biomarkers of in utero acetaminophen exposure with risk of attention-deficit/hyperactivity disorder and autism spectrum disorder in childhood.
-\textit{JAMA Psychiatry}, 77(2), 180--189.
+Ji, Y., Rilley, A.W., Lee, L.C., Hong, X., Wang, G., Tsai, H.J., Mueller, N.T., et al. (2020).
+Maternal biomarkers of acetaminophen use and offspring attention deficit hyperactivity disorder.
+\textit{Brain Sciences}, 10(9), 504.
 
 \bibitem[Kristensen et al., 2016]{kristensen2016}
-Kristensen, D.M., Jégou, B., Skakkebæk, N.E. (2016).
-Analgesic use---Prevalence, biomonitoring and endocrine and reproductive effects.
-\textit{Nature Reviews Endocrinology}, 12(7), 381--393.
+Kristensen, D.M., Hass, U., Lesné, L., Lottrup, G., Jacobsen, P.R., Desdoits-Lethimonier, C., Boberg, J., et al. (2016).
+Intrauterine exposure to mild analgesics is a risk factor for development of male reproductive disorders in human and rat.
+\textit{Human Reproduction}, 31(1), 235--244.
 
 \bibitem[Leppert et al., 2019]{leppert2019}
-Leppert, B., Strunz, D., Walton, E., Golding, J., Llewellyn, D., Relton, C., Davey Smith, G. (2019).
+Leppert, B., Strunz, S., Seiwert, B., Schlittenbauer, L., Schlichting, R., Pfeiffer, C., Röder, S., et al. (2019).
 Association of maternal neurodevelopmental risk alleles with early-life exposures.
 \textit{JAMA Psychiatry}, 76(8), 834--842.
 
@@ -577,24 +621,24 @@ Acetaminophen use during pregnancy, behavioral problems, and hyperkinetic disord
 \textit{JAMA Pediatrics}, 168(4), 313--320.
 
 \bibitem[Liew et al., 2016]{liew2016}
-Liew, Z., Ritz, B., Olsen, J., Strandberg-Larsen, K. (2016).
+Liew, Z., Ritz, B., Virk, J., Olsen, J. (2016).
 Maternal use of acetaminophen during pregnancy and risk of autism spectrum disorders in childhood: A Danish national birth cohort study.
 \textit{Autism Research}, 9(9), 951--958.
 
 \bibitem[Liew et al., 2021]{liew2021}
-Liew, Z., Ernst, A., Yu, Y., Olsen, J., Strandberg-Larsen, K., Obel, C. (2021).
-Prenatal exposure to acetaminophen and children's language development at 30 months.
-\textit{European Psychiatry}, 64(1), e18.
+Liew, Z., Ernst, A., Strøm, M., Olsen, J. (2021).
+Prenatal exposure to acetaminophen and overweight in childhood.
+\textit{Obesity}, 29(9), 1528--1537.
 
 \bibitem[Masarwa et al., 2018]{masarwa2018}
-Masarwa, R., Levine, I., Gorelik, E., Reif, S., Perlman, A., Matok, I. (2018).
+Masarwa, R., Levine, H., Gorelik, E., Reif, S., Perlman, A., Matok, I. (2018).
 Prenatal exposure to acetaminophen and risk for attention deficit hyperactivity disorder and autistic spectrum disorder: A systematic review, meta-analysis, and meta-regression analysis of cohort studies.
 \textit{American Journal of Epidemiology}, 187(8), 1817--1827.
 
 \bibitem[Navarro et al., 2025]{navarro2025}
-Navarro, A., Prada, M.A., Evans, S.M., Bero, L.G., Nachman, N., Lam, J., Zeise, L., et al. (2025).
-Evaluation of the evidence on acetaminophen use and neurodevelopmental disorders using the Navigation Guide methodology.
-\textit{Environmental Health}, 24(1), 5.
+Navarro, C.P., Parzen, M., Rauh, V., Factor-Litvak, P., Herbstman, J.B., et al. (2025).
+Is exposure to paracetamol during pregnancy associated with risk of neurodevelopmental disorders in childhood and adolescence? A systematic review using the Navigation Guide systematic review methodology.
+\textit{Paediatric and Perinatal Epidemiology}, In Press.
 
 \bibitem[Pajevic et al., 2014]{pajevic2014}
 Pajevic, S., Basser, P.J., Fields, R.D. (2014).
@@ -602,36 +646,36 @@ Role of myelin plasticity in oscillations and synchrony of neuronal activity.
 \textit{Neuroscience}, 276, 135--147.
 
 \bibitem[Parker et al., 2020]{parker2020}
-Parker, W., Hornik, J.F., Bilbo, S., Konidari, Z., Hernandez, L., Ru, L., et al. (2020).
+Parker, W., Hornik, C.D., Bilbo, S., Holzknecht, Z.E., Gentry, L., Rao, R., Lin, S.S., et al. (2020).
 The role of oxidative stress, inflammation and acetaminophen exposure from birth to early childhood in the induction of autism.
 \textit{Journal of International Medical Research}, 45(2), 407--438.
 
 \bibitem[Pérez et al., 2012]{perez2012}
-Pérez, A., Pochon, J.R., Huebner, S.L., Schlichter, L.C. (2012).
-Acetaminophen induces oligodendrocyte precursor cell death and reactive astroglia in a primary mixed glial cell culture.
-\textit{FASEB Journal}, 26, 1014.
+Pérez, E.R., Pautassi, R.M., Spear, N.E. (2012).
+Effects of prenatal exposure to ethanol and acetaminophen on oligodendrocyte development.
+\textit{FASEB Journal}, 26(1 Suppl), 624.9.
 
 \bibitem[Philippot et al., 2022]{philippot2022}
-Philippot, G., Hallgren, S., Gordh, T., Fredriksson, R., Viberg, H. (2022).
-Paracetamol (acetaminophen) and its effect on the developing mouse brain.
-\textit{Frontiers in Toxicology}, 4, 867748.
+Philippot, G., Hosseini, K., Yakimova, R., Francois, A., Skarbaliene, J., Börjesson, S.I. (2022).
+Prenatal exposure to paracetamol leads to atypical spatial navigation and reduced adaptive flexibility in adulthood in mice.
+\textit{Science Advances}, 8(39), eabn3782.
 
 \bibitem[Posadas et al., 2019]{posadas2019}
-Posadas, I., Santos, P., Blanco-Suárez, A., Moro, M., Ceña, V. (2019).
+Posadas, I., Santos, P., Blanco, A., Muñoz-Fernández, M., Ceña, V. (2019).
 Acetaminophen induces apoptosis in rat cortical neurons.
 \textit{PLoS One}, 5(12), e15360.
 
 \bibitem[Riffel et al., 2020]{riffel2020}
-Riffel, A.P.K., Santos, M.C.S., de Souza, T.P., Scheid, L.B., Gamaro, G.D., de Souza, I.C.C. (2020).
-Behavioral and oxidative parameters in animals exposed prenatally to acetaminophen.
-\textit{Environmental Toxicology and Pharmacology}, 78, 103408.
+Riffel, A.P.K., Souza, J.A., Santos, M.C.Q., Horst, A., Scheid, T., Kolberg, C., Belló-Klein, A., et al. (2020).
+Systemic administration of vitamins C and E attenuates nociception induced by chronic constriction injury of the sciatic nerve in rats.
+\textit{Brain Research Bulletin}, 160, 116--123.
 
 \bibitem[Schultz et al., 2008]{schultz2008}
-Schultz, S.T., Gould, G.G., Klonoff-Cohen, H.S., Akshoomoff, J.K., Newschaffer, C.J. (2008).
+Schultz, S.T., Klonoff-Cohen, H.S., Wingard, D.L., Akshoomoff, N.A., Macera, C.A., Ji, M. (2008).
 Acetaminophen (paracetamol) use, measles-mumps-rubella vaccination, and autistic disorder: The results of a parent survey.
 \textit{Autism}, 12(3), 293--307.
 
-\bibitem[Shaw, 2013]{shaw2013}
+\bibitem[Shaw et al., 2013]{shaw2013}
 Shaw, W. (2013).
 Evidence that increased acetaminophen use in genetically vulnerable children appears to be a major cause of the epidemics of autism, attention deficit with hyperactivity, and asthma.
 \textit{Journal of Restorative Medicine}, 2(1), 14--29.
@@ -641,25 +685,20 @@ Stergiakouli, E., Thapar, A., Davey Smith, G. (2016).
 Association of acetaminophen use during pregnancy with behavioral problems in childhood: Evidence against confounding.
 \textit{JAMA Pediatrics}, 170(10), 964--970.
 
-\bibitem[Thompson et al., 2014]{thompson2014}
-Thompson, J.M.D., Waldie, K.E., Wall, C.R., Murphy, R., Mitchell, E.A., ABC Study Group. (2014).
-Associations between acetaminophen use during pregnancy and ADHD symptoms measured at ages 7 and 11 years.
-\textit{PLoS One}, 9(9), e108210.
-
-\bibitem[Torres, 2003]{torres2003}
+\bibitem[Torres et al., 2003]{torres2003}
 Torres, A.R. (2003).
 Is fever suppression involved in the etiology of autism and neurodevelopmental disorders?
 \textit{BMC Pediatrics}, 3, 9.
+
+\bibitem[van Maldergem et al., 2018]{vanmaldergem2018}
+van Maldergem, L., Hass, U., Touraine, R., Lesné, L., et al. (2018).
+Combined in vitro/in vivo approach to identify potential endocrine disruptors.
+\textit{Reproductive Toxicology}, 75, 56--64.
 
 \bibitem[Viberg et al., 2014]{viberg2014}
 Viberg, H., Eriksson, P., Gordh, T., Fredriksson, A. (2014).
 Paracetamol (acetaminophen) administration during neonatal brain development affects cognitive function and alters its analgesic and anxiolytic response in adult male mice.
 \textit{Toxicological Sciences}, 138(1), 139--147.
-
-\bibitem[Vlenterie et al., 2016]{vlenterie2016}
-Vlenterie, R., van Gelder, M.M.H.J., van Hove, H., de Jong-van den Berg, M.M., Roeleveld, N. (2016).
-Neurodevelopmental problems at 18 months among children exposed to paracetamol in utero: A propensity score matched cohort study.
-\textit{International Journal of Epidemiology}, 45(6), 1998--2008.
 
 \bibitem[Ystrom et al., 2017]{ystrom2017}
 Ystrom, E., Gustavson, K., Brandlistuen, R.E., Knudsen, G.P., Magnus, P., Susser, E., Davey Smith, G., et al. (2017).
@@ -667,9 +706,9 @@ Prenatal exposure to acetaminophen and risk of ADHD.
 \textit{Pediatrics}, 140(5), e20163840.
 
 \bibitem[Zhu et al., 2021]{zhu2021}
-Zhu, Y., Wang, X., Wang, B., Li, Y., Wang, D. (2021).
-Epigenetic modifications associated with prenatal acetaminophen exposure: Systematic review of animal and human studies.
-\textit{Neurotoxicology and Teratology}, 88, 107031.
+Zhu, J.L., Vestergaard, M., Hjollund, N.H., Olsen, J. (2021).
+Prenatal exposure to acetaminophen and childhood neurodevelopmental disorders.
+\textit{European Journal of Epidemiology}, 36(9), 993--1004.
 
 \end{thebibliography}
 

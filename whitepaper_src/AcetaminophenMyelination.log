@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 SEP 2025 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  28 SEP 2025 18:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -551,55 +551,79 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip58
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen305
+\captionmargin=\dimen306
+\caption@leftmargin=\dimen307
+\caption@rightmargin=\dimen308
+\caption@width=\dimen309
+\caption@indent=\dimen310
+\caption@parindent=\dimen311
+\caption@hangindent=\dimen312
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count347
+\c@continuedfloat=\count348
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count349
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count350
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen305
-\pgfarrowlength=\dimen306
-\pgfarrowwidth=\dimen307
-\pgfarrowlinewidth=\dimen308
+\pgfarrowinset=\dimen313
+\pgfarrowlength=\dimen314
+\pgfarrowwidth=\dimen315
+\pgfarrowlinewidth=\dimen316
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 23.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 24.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count347
+\l__color_backend_stack_int=\count351
 \l__pdf_internal_box=\box76
 ) (./AcetaminophenMyelination.aux)
 \openout1 = `AcetaminophenMyelination.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count348
-\scratchdimen=\dimen309
+\scratchcounter=\count352
+\scratchdimen=\dimen317
 \scratchbox=\box77
-\nofMPsegments=\count349
-\nofMParguments=\count350
+\nofMPsegments=\count353
+\nofMParguments=\count354
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count351
-\MPscratchDim=\dimen310
-\MPnumerator=\count352
-\makeMPintoPDFobject=\count353
+\MPscratchCnt=\count355
+\MPscratchDim=\dimen318
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
 \everyMPtoPDFconversion=\toks47
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -644,26 +668,44 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 23.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 24.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 24.
 (./AcetaminophenMyelination.out) (./AcetaminophenMyelination.out)
 \@outlinefile=\write4
 \openout4 = `AcetaminophenMyelination.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (13.15408pt too wide) in paragraph at lines 27--28
+Overfull \hbox (13.15408pt too wide) in paragraph at lines 28--29
 []\OT1/cmr/m/n/10.95 The re-cent HHS an-nounce-ment ac-knowl-edg-ing con-cerns about pre-na-tal ac-etaminophen
  []
+
+<../assets/Myelination-Sankey.jpg, id=252, 1913.1475pt x 602.25pt>
+File: ../assets/Myelination-Sankey.jpg Graphic file (type jpg)
+<use ../assets/Myelination-Sankey.jpg>
+Package pdftex.def Info: ../assets/Myelination-Sankey.jpg  used on input line 37.
+(pdftex.def)             Requested size: 469.75502pt x 147.86957pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../assets/fetal-development.jpg, id=253, 1541.76pt x 606.265pt>
+File: ../assets/fetal-development.jpg Graphic file (type jpg)
+<use ../assets/fetal-development.jpg>
+Package pdftex.def Info: ../assets/fetal-development.jpg  used on input line 44.
+(pdftex.def)             Requested size: 469.75502pt x 184.7209pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
@@ -671,144 +713,88 @@ Overfull \hbox (13.15408pt too wide) in paragraph at lines 27--28
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <../assets/Myelination-Sankey.jpg>]
+<../assets/Autism-Ideogram.jpg, id=318, 1521.685pt x 919.435pt>
+File: ../assets/Autism-Ideogram.jpg Graphic file (type jpg)
+<use ../assets/Autism-Ideogram.jpg>
+Package pdftex.def Info: ../assets/Autism-Ideogram.jpg  used on input line 74.
+(pdftex.def)             Requested size: 469.75502pt x 283.8294pt.
 
-[3]
-<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=369, 284.39583pt x 171.64125pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[3 <../assets/fetal-development.jpg>]
+
+[4 <../assets/Autism-Ideogram.jpg>]
+
+[5]
+<../assets/MechanisticPathways.jpg, id=384, 1997.4625pt x 1324.95pt>
+File: ../assets/MechanisticPathways.jpg Graphic file (type jpg)
+<use ../assets/MechanisticPathways.jpg>
+Package pdftex.def Info: ../assets/MechanisticPathways.jpg  used on input line 132.
+(pdftex.def)             Requested size: 469.75502pt x 311.58568pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[6 <../assets/MechanisticPathways.jpg>]
+<../assets/SpongeModel.jpg, id=393, 1541.76pt x 1027.84pt>
+File: ../assets/SpongeModel.jpg Graphic file (type jpg)
+<use ../assets/SpongeModel.jpg>
+Package pdftex.def Info: ../assets/SpongeModel.jpg  used on input line 197.
+(pdftex.def)             Requested size: 375.80544pt x 250.52911pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=394, 284.39583pt x 171.64125pt>
 File: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png Graphic file (type png)
 <use ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>
-Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 105.
+Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 204.
 (pdftex.def)             Requested size: 375.80544pt x 226.82378pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
-[]|\OT1/cmr/bx/n/12 Predicted neu-rode-vel-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-[]|\OT1/cmr/m/n/12 Oxidative
- []
-
-
-Overfull \hbox (16.66985pt too wide) in paragraph at lines 161--161
-\OT1/cmr/m/n/12 stress/mitochondria| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
-[]|\OT1/cmr/m/n/12 Energy deficits in neu-
- []
-
-
-Underfull \hbox (badness 8113) in paragraph at lines 161--162
-\OT1/cmr/m/n/12 rons/OPCs; neu-roin-flam-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
-[]|\OT1/cmr/m/n/12 Endocrine dis-
- []
-
-
-Underfull \hbox (badness 1867) in paragraph at lines 162--163
-[]|\OT1/cmr/m/n/12 Sex-dimorphic cir-cuit for-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-[]|\OT1/cmr/m/n/12 Epigenetic re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
-[]|\OT1/cmr/m/n/12 Persistent gene net-work
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-[]|\OT1/cmr/m/n/12 OPC tox-i-c-
- []
-
-
-Underfull \hbox (badness 4726) in paragraph at lines 164--164
-\OT1/cmr/m/n/12 duced BDNF; be-hav-ioral
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
-[]|\OT1/cmr/m/n/12 Hypomyelination; slowed
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--165
-[]|\OT1/cmr/m/n/12 Frequency-
- []
-
-
-Underfull \hbox (badness 1043) in paragraph at lines 165--165
-\OT1/cmr/m/n/12 in MS; sex dif-fer-ences in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-[]|\OT1/cmr/m/n/12 Disrupted neu-ral syn-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-\OT1/cmr/m/n/12 chro-niza-tion; im-paired
- []
-
-
-Underfull \hbox (badness 5533) in paragraph at lines 165--166
-\OT1/cmr/m/n/12 frequency-dependent com-
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 166--166
-[]|\OT1/cmr/m/n/12 Connectome re-
- []
-
-
-Underfull \hbox (badness 5726) in paragraph at lines 166--166
-\OT1/cmr/m/n/12 nec-tiv-ity (hu-man); rigid
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[4]
-
-[5 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
-
-[6]
 
 [7]
-Overfull \hbox (4.15256pt too wide) in paragraph at lines 252--253
+
+[8 <../assets/SpongeModel.jpg>]
+<../assets/menger-sponge-mri.jpg, id=416, 3312.375pt x 2208.25pt>
+File: ../assets/menger-sponge-mri.jpg Graphic file (type jpg)
+<use ../assets/menger-sponge-mri.jpg>
+Package pdftex.def Info: ../assets/menger-sponge-mri.jpg  used on input line 249.
+(pdftex.def)             Requested size: 469.75502pt x 313.16261pt.
+
+
+Package caption Warning: \setcaptionsubtype
+(caption)                outside box or environment on input line 250.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 250.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 251.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[9 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
+
+[10 <../assets/menger-sponge-mri.jpg>]
+Overfull \hbox (4.15256pt too wide) in paragraph at lines 277--278
 \OT1/cmr/m/n/12 Over 30 epi-demi-o-log-i-cal stud-ies across dif-fer-ent pop-u-la-tions show sim-i-lar as-so-ci-a-tions [[]Navarro
- []
-
-
-
-[8]
-
-[9]
-
-[10]
-Overfull \hbox (0.60475pt too wide) in paragraph at lines 340--340
-[]\OT1/cmr/bx/n/17.28 Technical Ap-pendix: De-tailed Math-e-mat-i-cal Frame-
  []
 
 
@@ -818,6 +804,11 @@ Overfull \hbox (0.60475pt too wide) in paragraph at lines 340--340
 [12]
 
 [13]
+Overfull \hbox (0.60475pt too wide) in paragraph at lines 375--375
+[]\OT1/cmr/bx/n/17.28 Technical Ap-pendix: De-tailed Math-e-mat-i-cal Frame-
+ []
+
+
 
 [14]
 
@@ -826,28 +817,46 @@ Overfull \hbox (0.60475pt too wide) in paragraph at lines 340--340
 [16]
 
 [17]
+<../assets/nihms-1569306-f0005.jpg, id=591, 473.6094pt x 505.89pt>
+File: ../assets/nihms-1569306-f0005.jpg Graphic file (type jpg)
+<use ../assets/nihms-1569306-f0005.jpg>
+Package pdftex.def Info: ../assets/nihms-1569306-f0005.jpg  used on input line 559.
+(pdftex.def)             Requested size: 422.77664pt x 451.59926pt.
 
-[18] (./AcetaminophenMyelination.aux)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[18]
+
+[19]
+
+[20]
+
+[21]
+
+[22 <../assets/nihms-1569306-f0005.jpg>] (./AcetaminophenMyelination.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `AcetaminophenMyelination.out' has not changed.
-(rerunfilecheck)             Checksum: 8FE124F8E3F046451A11DF708CD68775;9826.
+(rerunfilecheck)             Checksum: 660CBF9794AF249B32A7072D47D412AA;10096.
  ) 
 Here is how much of TeX's memory you used:
- 36172 strings out of 473190
- 877877 string characters out of 5715801
- 1325899 words of memory out of 5000000
- 58764 multiletter control sequences out of 15000+600000
+ 37673 strings out of 473190
+ 907642 string characters out of 5715801
+ 1338671 words of memory out of 5000000
+ 60234 multiletter control sequences out of 15000+600000
  569513 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,19n,91p,993b,2164s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,19n,91p,1218b,2186s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on AcetaminophenMyelination.pdf (18 pages, 547007 bytes).
+Output written on AcetaminophenMyelination.pdf (22 pages, 4041431 bytes).
 PDF statistics:
- 687 PDF objects out of 1000 (max. 8388607)
- 632 compressed objects within 7 object streams
- 160 named destinations out of 1000 (max. 500000)
- 458 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 651 compressed objects within 7 object streams
+ 182 named destinations out of 1000 (max. 500000)
+ 501 words of extra memory for PDF output out of 10000 (max. 10000000)
 
