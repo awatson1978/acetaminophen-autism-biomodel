@@ -337,6 +337,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ../assets/Myelination-Sankey.jpg
 INPUT ../assets/Myelination-Sankey.jpg
 INPUT ../assets/Myelination-Sankey.jpg
@@ -348,7 +350,6 @@ INPUT ../assets/fetal-development.jpg
 INPUT ../assets/fetal-development.jpg
 INPUT ../assets/fetal-development.jpg
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ../assets/Autism-Ideogram.jpg
@@ -356,7 +357,6 @@ INPUT ../assets/Autism-Ideogram.jpg
 INPUT ../assets/Autism-Ideogram.jpg
 INPUT ../assets/Autism-Ideogram.jpg
 INPUT ../assets/Autism-Ideogram.jpg
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -384,6 +384,11 @@ INPUT ../assets/SpongeModel.jpg
 INPUT ../assets/SpongeModel.jpg
 INPUT ../assets/SpongeModel.jpg
 INPUT ../assets/SpongeModel.jpg
+INPUT ../assets/mylination.jpg
+INPUT ../assets/mylination.jpg
+INPUT ../assets/mylination.jpg
+INPUT ../assets/mylination.jpg
+INPUT ../assets/mylination.jpg
 INPUT ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png
 INPUT ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png
 INPUT ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png

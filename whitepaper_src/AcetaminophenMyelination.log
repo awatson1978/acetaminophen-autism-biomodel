@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  28 SEP 2025 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  29 SEP 2025 01:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -691,98 +691,110 @@ Overfull \hbox (13.15408pt too wide) in paragraph at lines 28--29
 []\OT1/cmr/m/n/10.95 The re-cent HHS an-nounce-ment ac-knowl-edg-ing con-cerns about pre-na-tal ac-etaminophen
  []
 
-<../assets/Myelination-Sankey.jpg, id=252, 1913.1475pt x 602.25pt>
-File: ../assets/Myelination-Sankey.jpg Graphic file (type jpg)
-<use ../assets/Myelination-Sankey.jpg>
-Package pdftex.def Info: ../assets/Myelination-Sankey.jpg  used on input line 37.
-(pdftex.def)             Requested size: 469.75502pt x 147.86957pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../assets/fetal-development.jpg, id=253, 1541.76pt x 606.265pt>
-File: ../assets/fetal-development.jpg Graphic file (type jpg)
-<use ../assets/fetal-development.jpg>
-Package pdftex.def Info: ../assets/fetal-development.jpg  used on input line 44.
-(pdftex.def)             Requested size: 469.75502pt x 184.7209pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <../assets/Myelination-Sankey.jpg>]
-<../assets/Autism-Ideogram.jpg, id=318, 1521.685pt x 919.435pt>
-File: ../assets/Autism-Ideogram.jpg Graphic file (type jpg)
-<use ../assets/Autism-Ideogram.jpg>
-Package pdftex.def Info: ../assets/Autism-Ideogram.jpg  used on input line 74.
-(pdftex.def)             Requested size: 469.75502pt x 283.8294pt.
+Package natbib Warning: Citation `avella-garcia2016' on page 2 undefined on input line 43.
 
+<../assets/Myelination-Sankey.jpg, id=270, 1913.1475pt x 602.25pt>
+File: ../assets/Myelination-Sankey.jpg Graphic file (type jpg)
+<use ../assets/Myelination-Sankey.jpg>
+Package pdftex.def Info: ../assets/Myelination-Sankey.jpg  used on input line 49.
+(pdftex.def)             Requested size: 469.75502pt x 147.86957pt.
+<../assets/fetal-development.jpg, id=271, 1541.76pt x 602.25pt>
+File: ../assets/fetal-development.jpg Graphic file (type jpg)
+<use ../assets/fetal-development.jpg>
+Package pdftex.def Info: ../assets/fetal-development.jpg  used on input line 56.
+(pdftex.def)             Requested size: 469.75502pt x 183.49759pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[3 <../assets/fetal-development.jpg>]
+[2 <../assets/Myelination-Sankey.jpg>]
+
+[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <../assets/fetal-development.jpg>]
+<../assets/Autism-Ideogram.jpg, id=328, 1521.685pt x 919.435pt>
+File: ../assets/Autism-Ideogram.jpg Graphic file (type jpg)
+<use ../assets/Autism-Ideogram.jpg>
+Package pdftex.def Info: ../assets/Autism-Ideogram.jpg  used on input line 86.
+(pdftex.def)             Requested size: 469.75502pt x 283.8294pt.
+
 
 [4 <../assets/Autism-Ideogram.jpg>]
 
 [5]
-<../assets/MechanisticPathways.jpg, id=384, 1997.4625pt x 1324.95pt>
+
+[6]
+
+[7]
+<../assets/MechanisticPathways.jpg, id=398, 1997.4625pt x 1324.95pt>
 File: ../assets/MechanisticPathways.jpg Graphic file (type jpg)
 <use ../assets/MechanisticPathways.jpg>
-Package pdftex.def Info: ../assets/MechanisticPathways.jpg  used on input line 132.
+Package pdftex.def Info: ../assets/MechanisticPathways.jpg  used on input line 187.
 (pdftex.def)             Requested size: 469.75502pt x 311.58568pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 <../assets/MechanisticPathways.jpg>]
-<../assets/SpongeModel.jpg, id=393, 1541.76pt x 1027.84pt>
+
+
+[8]
+
+[9 <../assets/MechanisticPathways.jpg>]
+<../assets/SpongeModel.jpg, id=424, 1541.76pt x 1027.84pt>
 File: ../assets/SpongeModel.jpg Graphic file (type jpg)
 <use ../assets/SpongeModel.jpg>
-Package pdftex.def Info: ../assets/SpongeModel.jpg  used on input line 197.
+Package pdftex.def Info: ../assets/SpongeModel.jpg  used on input line 251.
 (pdftex.def)             Requested size: 375.80544pt x 250.52911pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=394, 284.39583pt x 171.64125pt>
+<../assets/mylination.jpg, id=425, 6022.5pt x 1554.80875pt>
+File: ../assets/mylination.jpg Graphic file (type jpg)
+<use ../assets/mylination.jpg>
+Package pdftex.def Info: ../assets/mylination.jpg  used on input line 258.
+(pdftex.def)             Requested size: 422.77664pt x 109.13242pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png, id=426, 284.39583pt x 171.64125pt>
 File: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png Graphic file (type png)
 <use ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>
-Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 204.
+Package pdftex.def Info: ../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png  used on input line 265.
 (pdftex.def)             Requested size: 375.80544pt x 226.82378pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[7]
-
-[8 <../assets/SpongeModel.jpg>]
-<../assets/menger-sponge-mri.jpg, id=416, 3312.375pt x 2208.25pt>
+[10]
+<../assets/menger-sponge-mri.jpg, id=438, 3312.375pt x 2208.25pt>
 File: ../assets/menger-sponge-mri.jpg Graphic file (type jpg)
 <use ../assets/menger-sponge-mri.jpg>
-Package pdftex.def Info: ../assets/menger-sponge-mri.jpg  used on input line 249.
+Package pdftex.def Info: ../assets/menger-sponge-mri.jpg  used on input line 310.
 (pdftex.def)             Requested size: 469.75502pt x 313.16261pt.
 
 
 Package caption Warning: \setcaptionsubtype
-(caption)                outside box or environment on input line 250.
+(caption)                outside box or environment on input line 311.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 250.
+(caption)                outside box or environment on input line 311.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 251.
+(caption)                outside box or environment on input line 312.
 See the caption package documentation for explanation.
 
 
@@ -790,41 +802,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[9 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
-
-[10 <../assets/menger-sponge-mri.jpg>]
-Overfull \hbox (4.15256pt too wide) in paragraph at lines 277--278
+[11 <../assets/SpongeModel.jpg>]
+Overfull \hbox (4.15256pt too wide) in paragraph at lines 338--339
 \OT1/cmr/m/n/12 Over 30 epi-demi-o-log-i-cal stud-ies across dif-fer-ent pop-u-la-tions show sim-i-lar as-so-ci-a-tions [[]Navarro
  []
 
 
 
-[11]
+[12 <../assets/mylination.jpg>]
 
-[12]
+[13 <../assets/Microscopic-view-of-the-bark-and-resin-secretory-structures-of-a-B-papyrifera-tree-A.png>]
 
-[13]
-Overfull \hbox (0.60475pt too wide) in paragraph at lines 375--375
-[]\OT1/cmr/bx/n/17.28 Technical Ap-pendix: De-tailed Math-e-mat-i-cal Frame-
- []
-
-
-
-[14]
+[14 <../assets/menger-sponge-mri.jpg>]
 
 [15]
 
 [16]
 
 [17]
-<../assets/nihms-1569306-f0005.jpg, id=591, 473.6094pt x 505.89pt>
-File: ../assets/nihms-1569306-f0005.jpg Graphic file (type jpg)
-<use ../assets/nihms-1569306-f0005.jpg>
-Package pdftex.def Info: ../assets/nihms-1569306-f0005.jpg  used on input line 559.
-(pdftex.def)             Requested size: 422.77664pt x 451.59926pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (0.60475pt too wide) in paragraph at lines 441--441
+[]\OT1/cmr/bx/n/17.28 Technical Ap-pendix: De-tailed Math-e-mat-i-cal Frame-
+ []
 
 
 
@@ -832,31 +830,69 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
 [20]
 
-[21]
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <../assets/nihms-1569306-f0005.jpg>] (./AcetaminophenMyelination.aux)
+<../assets/nihms-1569306-f0005.jpg, id=616, 473.6094pt x 505.89pt>
+File: ../assets/nihms-1569306-f0005.jpg Graphic file (type jpg)
+<use ../assets/nihms-1569306-f0005.jpg>
+Package pdftex.def Info: ../assets/nihms-1569306-f0005.jpg  used on input line 625.
+(pdftex.def)             Requested size: 422.77664pt x 451.59926pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[21]
+Underfull \hbox (badness 1769) in paragraph at lines 676--680
+[]\OT1/cmr/m/n/12 Grosu, G.F., Hopp, A.V., Moca, V.V., et al. (2023). The frac-tal brain: scale-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--680
+\OT1/cmr/m/n/12 invariance in struc-ture and dy-nam-ics. \OT1/cmr/m/it/12 Cere-bral Cor-tex\OT1/cmr/m/n/12 , 33(8), 4574--4605.
+ []
+
+
+
+[22]
+
+[23]
+
+[24]
+
+Package natbib Warning: There were undefined citations.
+
+
+
+[25]
+
+[26 <../assets/nihms-1569306-f0005.jpg>] (./AcetaminophenMyelination.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `AcetaminophenMyelination.out' has not changed.
-(rerunfilecheck)             Checksum: 660CBF9794AF249B32A7072D47D412AA;10096.
+(rerunfilecheck)             Checksum: 6EA091E3ABB3A0DE48144A60C8FB59E3;10899.
  ) 
 Here is how much of TeX's memory you used:
- 37673 strings out of 473190
- 907642 string characters out of 5715801
- 1338671 words of memory out of 5000000
- 60234 multiletter control sequences out of 15000+600000
+ 37720 strings out of 473190
+ 908449 string characters out of 5715801
+ 1343015 words of memory out of 5000000
+ 60262 multiletter control sequences out of 15000+600000
  569513 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,19n,91p,1218b,2186s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on AcetaminophenMyelination.pdf (22 pages, 4041431 bytes).
+Output written on AcetaminophenMyelination.pdf (26 pages, 6596821 bytes).
 PDF statistics:
- 717 PDF objects out of 1000 (max. 8388607)
- 651 compressed objects within 7 object streams
- 182 named destinations out of 1000 (max. 500000)
- 501 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 756 PDF objects out of 1000 (max. 8388607)
+ 685 compressed objects within 7 object streams
+ 201 named destinations out of 1000 (max. 500000)
+ 522 words of extra memory for PDF output out of 10000 (max. 10000000)
 
