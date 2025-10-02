@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioModels WASM Simulator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input, select, button {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+        }
+        button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        #status {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        #chart {
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            left: -9999px;
+        }
+        .file-input-wrapper label {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .file-input-wrapper label:hover {
+            background: #764ba2;
+        }
+        #modelInfo {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .species-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .species-tag {
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🧬 BioModels WASM Simulator</h1>
+        
+        <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+            <div class="file-input-wrapper">
+                <label for="fileInput" style="margin: 0;">📁 Load SBML Model</label>
+                <input type="file" id="fileInput" accept=".xml,.sbml">
+            </div>
+            
+            <button id="loadSample" style="padding: 10px 20px;">🧪 Load Sample Model</button>
+            
+            <div class="file-input-wrapper">
+                <label for="configInput" style="margin: 0; background: #28a745;">⚙️ Load Config File</label>
+                <input type="file" id="configInput" accept=".yml,.yaml">
+            </div>
+            
+            <select id="presetConfigs" style="padding: 10px; border-radius: 5px; display: none;">
+                <option value="">-- Select Preset Config --</option>
+                <option value="myelination_2nd_trimester">2nd Trimester APAP</option>
+                <option value="myelination_40weeks">40 Weeks</option>
+                <option value="myelination_periodic">Periodic Dosing</option>
+                <option value="myelination_stable">Stable State</option>
+            </select>
+        </div>
+        
+        <div id="modelInfo" style="display: none;">
+            <h3>Model Information</h3>
+            <div id="speciesInfo"></div>
+            <div id="parameterInfo"></div>
+            
+            <div id="modelInputs" style="margin-top: 20px;">
+                <h4>🧪 Species Initial Concentrations</h4>
+                <div id="speciesInputs" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; max-height: 300px; overflow-y: auto; padding: 10px; background: #f8f9fa; border-radius: 5px;"></div>
+                
+                <h4 style="margin-top: 20px;">⚙️ Parameter Values</h4>
+                <div id="parameterInputs" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; max-height: 300px; overflow-y: auto; padding: 10px; background: #f8f9fa; border-radius: 5px;"></div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="timeEnd">Simulation Time (hours)</label>
+                <input type="number" id="timeEnd" value="100" step="10">
+            </div>
+            <div class="control-group">
+                <label for="timeStep">Time Step (hours)</label>
+                <input type="number" id="timeStep" value="0.1" step="0.01">
+            </div>
+            <div class="control-group">
+                <label for="method">Integration Method</label>
+                <select id="method">
+                    <option value="rk4">Runge-Kutta 4</option>
+                    <option value="euler">Euler</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>&nbsp;</label>
+                <button id="simulate">Run Simulation</button>
+            </div>
+        </div>
+        
+        <div id="status"></div>
+        
+        <canvas id="chart" style="display: none;"></canvas>
+    </div>
+    
+    <script type="module">
+        import init, { BioModel } from './pkg/biomodels_wasm.js';
+        
+        let model = null;
+        let chart = null;
+        
+        function setStatus(message, type = 'info') {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = type;
+            status.style.display = 'block';
+        }
+        
+        function generateColors(count) {
+            const colors = [];
+            for (let i = 0; i < count; i++) {
+                const hue = (i * 360) / count;
+                colors.push(`hsl(${hue}, 70%, 50%)`);
+            }
+            return colors;
+        }
+        
+        async function loadModel(sbmlContent) {
+            try {
+                model = new BioModel(sbmlContent);
+                
+                const speciesNames = model.getSpeciesNames();
+                const speciesIds = model.getSpeciesIds();
+                const parameters = model.getParameters();
+                const concentrations = model.getInitialConcentrations();
+                
+                document.getElementById('modelInfo').style.display = 'block';
+                
+                const speciesInfo = document.getElementById('speciesInfo');
+                speciesInfo.innerHTML = `
+                    <p><strong>Species (${speciesNames.length}):</strong></p>
+                    <div class="species-list">
+                        ${speciesNames.map((name, i) => 
+                            `<span class="species-tag">${name} (${speciesIds[i]})</span>`
+                        ).join('')}
+                    </div>
+                `;
+                
+                const paramCount = Object.keys(parameters).length;
+                document.getElementById('parameterInfo').innerHTML = 
+                    `<p><strong>Parameters:</strong> ${paramCount} defined</p>`;
+                
+                // Generate species input fields
+                const speciesInputsDiv = document.getElementById('speciesInputs');
+                speciesInputsDiv.innerHTML = '';
+                speciesIds.forEach((id, i) => {
+                    const inputGroup = document.createElement('div');
+                    inputGroup.style.cssText = 'display: flex; align-items: center; gap: 5px;';
+                    inputGroup.innerHTML = `
+                        <label style="flex: 1; font-size: 12px; overflow: hidden; text-overflow: ellipsis;" title="${speciesNames[i]} (${id})">
+                            ${speciesNames[i].length > 25 ? speciesNames[i].substring(0, 25) + '...' : speciesNames[i]}:
+                        </label>
+                        <input type="number" 
+                               id="species_${id}" 
+                               value="${concentrations[id] || 0}" 
+                               step="0.1" 
+                               style="width: 100px; padding: 5px; font-size: 12px;"
+                               data-species-id="${id}">
+                    `;
+                    speciesInputsDiv.appendChild(inputGroup);
+                });
+                
+                // Generate parameter input fields
+                const paramInputsDiv = document.getElementById('parameterInputs');
+                paramInputsDiv.innerHTML = '';
+                Object.entries(parameters).forEach(([id, value]) => {
+                    const inputGroup = document.createElement('div');
+                    inputGroup.style.cssText = 'display: flex; align-items: center; gap: 5px;';
+                    inputGroup.innerHTML = `
+                        <label style="flex: 1; font-size: 12px;" title="${id}">
+                            ${id.length > 25 ? id.substring(0, 25) + '...' : id}:
+                        </label>
+                        <input type="number" 
+                               id="param_${id}" 
+                               value="${value}" 
+                               step="0.01" 
+                               style="width: 100px; padding: 5px; font-size: 12px;"
+                               data-param-id="${id}">
+                    `;
+                    paramInputsDiv.appendChild(inputGroup);
+                });
+                
+                setStatus(`Model loaded successfully! ${speciesNames.length} species, ${paramCount} parameters`, 'success');
+                
+            } catch (error) {
+                setStatus(`Error loading model: ${error}`, 'error');
+            }
+        }
+        
+        async function runSimulation() {
+            if (!model) {
+                setStatus('Please load a model first', 'error');
+                return;
+            }
+            
+            try {
+                setStatus('Applying parameter updates...', 'info');
+                
+                // Update species initial concentrations from input fields
+                document.querySelectorAll('input[data-species-id]').forEach(input => {
+                    const speciesId = input.dataset.speciesId;
+                    const value = parseFloat(input.value) || 0;
+                    model.setInitialConcentration(speciesId, value);
+                });
+                
+                // Update parameter values from input fields
+                document.querySelectorAll('input[data-param-id]').forEach(input => {
+                    const paramId = input.dataset.paramId;
+                    const value = parseFloat(input.value) || 0;
+                    model.setParameter(paramId, value);
+                });
+                
+                const config = {
+                    timeEnd: parseFloat(document.getElementById('timeEnd').value),
+                    timeStep: parseFloat(document.getElementById('timeStep').value),
+                    method: document.getElementById('method').value
+                };
+                
+                setStatus('Running simulation...', 'info');
+                
+                const results = model.simulate(config);
+                
+                plotResults(results);
+                
+                setStatus('Simulation completed successfully!', 'success');
+                
+            } catch (error) {
+                setStatus(`Simulation error: ${error}`, 'error');
+            }
+        }
+        
+        function plotResults(results) {
+            const canvas = document.getElementById('chart');
+            canvas.style.display = 'block';
+            
+            const ctx = canvas.getContext('2d');
+            
+            const datasets = [];
+            const colors = generateColors(results.species_names.length);
+            
+            // Downsample if too many points for smooth display
+            const maxPoints = 1000;
+            const step = Math.max(1, Math.floor(results.time.length / maxPoints));
+            
+            console.log(`Data has ${results.time.length} points, displaying every ${step} points`);
+            
+            for (let i = 0; i < results.species_names.length; i++) {
+                const data = [];
+                for (let t = 0; t < results.time.length; t += step) {
+                    data.push({
+                        x: results.time[t],
+                        y: results.values[t * results.num_species + i]
+                    });
+                }
+                
+                datasets.push({
+                    label: results.species_names[i],
+                    data: data,
+                    borderColor: colors[i],
+                    backgroundColor: colors[i] + '20',
+                    fill: false,
+                    tension: 0.1,
+                    borderWidth: 1.5,
+                    pointRadius: 0  // Hide points for cleaner lines with many data points
+                });
+            }
+            
+            if (chart) {
+                chart.destroy();
+            }
+            
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: { datasets },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Species Concentrations Over Time'
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            title: {
+                                display: true,
+                                text: 'Time (hours)'
+                            },
+                            min: 0,
+                            max: results.time[results.time.length - 1],
+                            ticks: {
+                                stepSize: Math.ceil(results.time[results.time.length - 1] / 10),
+                                callback: function(value) {
+                                    // Format large hour values nicely
+                                    if (value >= 168) {
+                                        const weeks = Math.floor(value / 168);
+                                        const days = Math.floor((value % 168) / 24);
+                                        if (days === 0) return `${weeks}w`;
+                                        return `${weeks}w ${days}d`;
+                                    } else if (value >= 24) {
+                                        const days = Math.floor(value / 24);
+                                        const hours = value % 24;
+                                        if (hours === 0) return `${days}d`;
+                                        return `${days}d ${hours}h`;
+                                    }
+                                    return `${value}h`;
+                                }
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Concentration (μM)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        async function main() {
+            setStatus('Initializing WASM module...', 'info');
+            await init();
+            setStatus('WASM module loaded. Ready to simulate!', 'success');
+            
+            document.getElementById('fileInput').addEventListener('change', async (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const content = await file.text();
+                    await loadModel(content);
+                }
+            });
+            
+            document.getElementById('loadSample').addEventListener('click', async () => {
+                const sampleModel = `<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
+  <model id="simple_enzymatic" name="Simple Enzymatic Reaction">
+    <listOfCompartments>
+      <compartment id="cell" name="Cell" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="S" name="Substrate" compartment="cell" initialConcentration="10.0"/>
+      <species id="E" name="Enzyme" compartment="cell" initialConcentration="1.0"/>
+      <species id="ES" name="Enzyme-Substrate Complex" compartment="cell" initialConcentration="0.0"/>
+      <species id="P" name="Product" compartment="cell" initialConcentration="0.0"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="k1" value="0.5" constant="true"/>
+      <parameter id="k2" value="0.1" constant="true"/>
+      <parameter id="k3" value="0.2" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="binding" name="Substrate Binding">
+        <listOfReactants>
+          <speciesReference species="S"/>
+          <speciesReference species="E"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ES"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="unbinding" name="Complex Dissociation">
+        <listOfReactants>
+          <speciesReference species="ES"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="S"/>
+          <speciesReference species="E"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="catalysis" name="Product Formation">
+        <listOfReactants>
+          <speciesReference species="ES"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="E"/>
+          <speciesReference species="P"/>
+        </listOfProducts>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>`;
+                await loadModel(sampleModel);
+            });
+            
+            document.getElementById('simulate').addEventListener('click', runSimulation);
+            
+            // Add config file loading
+            document.getElementById('configInput').addEventListener('change', async (e) => {
+                const file = e.target.files[0];
+                if (file && model) {
+                    try {
+                        const content = await file.text();
+                        const config = jsyaml.load(content);
+                        applyConfig(config);
+                        setStatus(`Config loaded: ${file.name}`, 'success');
+                    } catch (error) {
+                        setStatus(`Error loading config: ${error}`, 'error');
+                    }
+                } else if (!model) {
+                    setStatus('Please load a model first', 'error');
+                }
+            });
+        }
+        
+        function applyConfig(config) {
+            if (!config.inputs) {
+                setStatus('No inputs found in config file', 'error');
+                return;
+            }
+            
+            let appliedCount = 0;
+            
+            // Apply species concentrations and parameters from config
+            Object.entries(config.inputs).forEach(([key, value]) => {
+                // Try as species first
+                const speciesInput = document.getElementById(`species_${key}`);
+                if (speciesInput) {
+                    speciesInput.value = value;
+                    appliedCount++;
+                } else {
+                    // Try as parameter
+                    const paramInput = document.getElementById(`param_${key}`);
+                    if (paramInput) {
+                        paramInput.value = value;
+                        appliedCount++;
+                    }
+                }
+            });
+            
+            // Apply simulation settings if present
+            if (config.duration) {
+                document.getElementById('timeEnd').value = config.duration;
+                console.log(`Set duration to ${config.duration} hours`);
+            }
+            if (config.stepSize) {
+                document.getElementById('timeStep').value = config.stepSize;
+                console.log(`Set step size to ${config.stepSize} hours`);
+            }
+            
+            // Show what was loaded in status
+            let statusMsg = `Applied ${appliedCount} values from config`;
+            if (config.duration || config.stepSize) {
+                statusMsg += ` (Duration: ${config.duration || 'unchanged'} hrs, Step: ${config.stepSize || 'unchanged'} hrs)`;
+            }
+            setStatus(statusMsg, 'success');
+        }
+        
+        main().catch(console.error);
+    </script>
+</body>
+</html>

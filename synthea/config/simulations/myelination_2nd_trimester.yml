@@ -1,0 +1,105 @@
+# Second Trimester APAP Exposure Model
+# Models repeated acetaminophen exposure during critical weeks 12-24
+name: myelination_2nd_trimester
+
+# Name of the model file (SBML format)
+model: APAP_Myelination_Model.xml
+
+# Solver configuration
+solver: dormand_prince_54  # Stable solver for stiff equations
+stepSize: 0.5  # 30-minute steps for better resolution
+duration: 2016  # 12 weeks (weeks 12-24 of pregnancy = 84 days * 24 hours)
+
+## Initial conditions - Second trimester starting point
+inputs:
+    # APAP exposure - Simulating 500mg dose (therapeutic level)
+    # Will manually re-dose in post-processing
+    APAP_maternal: 2.0  # Therapeutic dose level
+    APAP_placenta: 0.0
+    APAP_fetal: 0.0
+    NAPQI: 0.0
+    
+    # Endocrine system - Normal second trimester levels
+    Testosterone: 300.0  # Higher in second trimester
+    T_effective: 50.0  # Some baseline effective T
+    
+    # Cell populations - Second trimester levels
+    OPC: 5000.0  # More OPCs by second trimester
+    OL_immature: 500.0
+    OL_mature: 200.0
+    
+    # Oxidative stress markers
+    CYP2E1: 1.0  # Fully expressed by second trimester
+    GSH: 100.0
+    GSSG: 10.0
+    ROS: 5.0
+    
+    # Supporting systems
+    Folate: 40.0  # May be lower if supplementation inconsistent
+    SAM: 20.0
+    
+    # Time tracking - Start at week 12
+    gestational_week: 12.0
+    critical_period_1: 3.5  # Active during weeks 12-22
+    critical_period_2: 0.0
+    critical_period_3: 0.0
+    
+    # Adjusted rates for realistic dynamics
+    k_placental_transfer: 0.05  # Moderate transfer rate
+    k_fetal_clearance: 0.02  # Slower fetal clearance (immature metabolism)
+    k_cyp2e1_activity: 0.05  # Moderate CYP2E1 activity
+    opc_proliferation_rate: 0.002  # Active proliferation in 2nd trimester
+    ol_differentiation_rate: 0.001  # Active differentiation
+    ros_generation_rate: 0.05  # Moderate ROS from NAPQI
+    androgen_disruption_rate: 0.1  # Significant during critical period
+    
+    # Recovery parameters (for testosterone recovery between doses)
+    T_baseline: 300.0  # Baseline testosterone production
+    antioxidant_capacity: 1.0
+    methylation_rate: 0.1
+    demethylation_rate: 0.05
+    
+# Charts showing second trimester dynamics
+charts:
+    - filename: apap_2nd_trimester.png
+      type: line
+      title: "APAP Exposure - Second Trimester"
+      axisParamX: time
+      axisLabelX: "Hours from Week 12"
+      axisLabelY: "Concentration (μM)"
+      series:
+        - param: APAP_maternal
+        - param: APAP_fetal
+        - param: NAPQI
+    
+    - filename: testosterone_2nd_trimester.png
+      type: line
+      title: "Testosterone Disruption - Second Trimester"
+      axisParamX: time
+      axisLabelX: "Hours from Week 12"
+      axisLabelY: "Level (ng/dL)"
+      series:
+        - param: Testosterone
+        - param: T_effective
+    
+    - filename: oxidative_2nd_trimester.png
+      type: line
+      title: "Oxidative Stress - Second Trimester"
+      axisParamX: time
+      axisLabelX: "Hours from Week 12"
+      axisLabelY: "Level (AU)"
+      series:
+        - param: ROS
+        - param: GSH
+        - param: GSSG
+    
+    - filename: oligodendrocytes_2nd_trimester.png
+      type: line
+      title: "Oligodendrocyte Lineage - Second Trimester"
+      axisParamX: time
+      axisLabelX: "Hours from Week 12"
+      axisLabelY: "Cell Count"
+      series:
+        - param: OPC
+        - param: OL_immature
+        - param: OL_mature

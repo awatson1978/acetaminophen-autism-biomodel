@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Acetaminophen-Autism Neurodevelopmental BioModel -->
+<!-- Multi-compartment, multi-timescale systems biology model -->
+
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
+  <model id="acetaminophen_autism_model" name="Acetaminophen-Induced Neurodevelopmental Disruption">
+    
+    <!-- FUNCTION DEFINITIONS -->
+    <listOfFunctionDefinitions>
+      <!-- Biphasic dose-response function for EDCs with non-monotonic effects -->
+      <functionDefinition id="edc_biphasic" name="Non-monotonic EDC dose response">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar><ci>Phi</ci></bvar>
+            <bvar><ci>w1</ci></bvar>
+            <bvar><ci>K1</ci></bvar>
+            <bvar><ci>n1</ci></bvar>
+            <bvar><ci>w2</ci></bvar>
+            <bvar><ci>K2</ci></bvar>
+            <bvar><ci>n2</ci></bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci>w1</ci>
+                <apply>
+                  <divide/>
+                  <apply><power/><ci>Phi</ci><ci>n1</ci></apply>
+                  <apply>
+                    <plus/>
+                    <apply><power/><ci>K1</ci><ci>n1</ci></apply>
+                    <apply><power/><ci>Phi</ci><ci>n1</ci></apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci>w2</ci>
+                <apply>
+                  <divide/>
+                  <apply><power/><ci>Phi</ci><ci>n2</ci></apply>
+                  <apply>
+                    <plus/>
+                    <apply><power/><ci>K2</ci><ci>n2</ci></apply>
+                    <apply><power/><ci>Phi</ci><ci>n2</ci></apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      
+      <!-- Simple Hill function for monotonic EDC effects -->
+      <functionDefinition id="edc_hill" name="Hill function for EDC effect">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar><ci>C</ci></bvar>
+            <bvar><ci>K</ci></bvar>
+            <bvar><ci>n</ci></bvar>
+            <apply>
+              <divide/>
+              <apply><power/><ci>C</ci><ci>n</ci></apply>
+              <apply>
+                <plus/>
+                <apply><power/><ci>K</ci><ci>n</ci></apply>
+                <apply><power/><ci>C</ci><ci>n</ci></apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    
+    <!-- COMPARTMENTS -->
+    <listOfCompartments>
+      <compartment id="maternal_plasma" name="Maternal Plasma" spatialDimensions="3" constant="true"/>
+      <compartment id="placenta" name="Placental Tissue" spatialDimensions="3" constant="true"/>
+      <compartment id="fetal_brain" name="Fetal Brain" spatialDimensions="3" constant="true"/>
+      <compartment id="fetal_plasma" name="Fetal Circulation" spatialDimensions="3" constant="true"/>
+      <compartment id="oligodendrocyte" name="Oligodendrocyte Lineage" spatialDimensions="3" constant="true"/>
+    </listOfCompartments>
+
+    <!-- SPECIES (Molecular Components) -->
+    <listOfSpecies>
+      <!-- Pharmacokinetic Species -->
+      <species id="APAP_maternal" name="Acetaminophen_Maternal" compartment="maternal_plasma"/>
+      <species id="APAP_placenta" name="Acetaminophen_Placental" compartment="placenta"/>
+      <species id="APAP_fetal" name="Acetaminophen_Fetal" compartment="fetal_brain"/>
+      <species id="NAPQI" name="N_acetyl_p_benzoquinone_imine" compartment="fetal_brain"/>
+      
+      <!-- Endocrine Species -->
+      <species id="Testosterone" name="Testosterone" compartment="fetal_plasma" initialConcentration="0"/>
+      <species id="LH" name="Luteinizing_Hormone" compartment="fetal_plasma" initialConcentration="0"/>
+      <species id="FSH" name="Follicle_Stimulating_Hormone" compartment="fetal_plasma" initialConcentration="0"/>
+      <species id="T_effective" name="Bioavailable_Testosterone" compartment="fetal_brain"/>
+      <species id="AromataseComplex" name="Aromatase_APAP_Complex" compartment="placenta"/>
+      
+      <!-- Metabolic Species -->
+      <species id="CYP2E1" name="Cytochrome_P450_2E1" compartment="fetal_brain"/>
+      <species id="CYP2E1_APAP" name="CYP2E1_APAP_Complex" compartment="fetal_brain"/>
+      <species id="Folate" name="Folate" compartment="fetal_brain"/>
+      <species id="SAM" name="S_Adenosyl_Methionine" compartment="fetal_brain"/>
+      
+      <!-- Oxidative Stress Species -->
+      <species id="ROS" name="Reactive_Oxygen_Species" compartment="fetal_brain"/>
+      <species id="GSH" name="Glutathione" compartment="fetal_brain"/>
+      <species id="GSSG" name="Glutathione_Disulfide" compartment="fetal_brain"/>
+      
+      <!-- Oligodendrocyte Lineage -->
+      <species id="OPC" name="Oligodendrocyte_Precursor_Cells" compartment="oligodendrocyte"/>
+      <species id="OL_immature" name="Immature_Oligodendrocytes" compartment="oligodendrocyte"/>
+      <species id="OL_mature" name="Mature_Oligodendrocytes" compartment="oligodendrocyte"/>
+      
+      <!-- Myelination Machinery -->
+      <species id="MBP_mRNA" name="Myelin_Basic_Protein_mRNA" compartment="oligodendrocyte"/>
+      <species id="MBP_protein" name="Myelin_Basic_Protein" compartment="oligodendrocyte"/>
+      <species id="Myelin_sheath" name="Myelin_Sheath_Formation" compartment="fetal_brain"/>
+      
+      <!-- Epigenetic Machinery -->
+      <species id="DNMT1" name="DNA_Methyltransferase_1" compartment="fetal_brain"/>
+      <species id="MBP_promoter" name="MBP_Promoter_Unmethylated" compartment="oligodendrocyte"/>
+      <species id="MBP_promoter_meth" name="MBP_Promoter_Methylated" compartment="oligodendrocyte"/>
+      
+      <!-- Connectivity Outcomes -->
+      <species id="Intra_hemisphere_connectivity" name="Within_Hemisphere_Connections" compartment="fetal_brain"/>
+      <species id="Inter_hemisphere_connectivity" name="Between_Hemisphere_Connections" compartment="fetal_brain"/>
+      <species id="Corpus_callosum_volume" name="Corpus_Callosum_Volume" compartment="fetal_brain"/>
+      
+      <!-- Time tracking species (for rate rules) -->
+      <species id="gestational_week" name="Gestational_Week" compartment="fetal_plasma" initialConcentration="0"/>
+      
+      <!-- Oscillatory Readout and Myelination Proxy -->
+      <species id="F" name="Dominant_Oscillatory_Frequency_Hz" compartment="fetal_brain"
+               boundaryCondition="true" constant="false"/>
+      <species id="O_proxy" name="Myelination_Proxy" compartment="oligodendrocyte"
+               boundaryCondition="true" constant="false"/>
+      
+      <!-- NEW: Placental/fetal reactive species and adduct sinks -->
+      <species id="APAP_placenta" name="Acetaminophen_Placenta" compartment="placenta"/>
+      <species id="NAPQI_placenta" name="NAPQI_Placenta" compartment="placenta"/>
+      <species id="NAPQI_adduct_placenta" name="NAPQI_Protein_Adduct_Placenta" compartment="placenta"/>
+      <species id="NAPQI_adduct_fetal" name="NAPQI_Protein_Adduct_Fetal" compartment="fetal_brain"/>
+      
+      <!-- NEW: Detox capacity and enzymes -->
+      <species id="GSH_placenta" name="Glutathione_Placenta" compartment="placenta" initialConcentration="10"/>
+      <species id="CYP2E1_placenta" name="CYP2E1_Placenta" compartment="placenta" initialConcentration="1"/>
+      
+      <!-- NEW: Brain-local PAP/AM404 pathway -->
+      <species id="PAP_fetal" name="p_Aminophenol_Fetal" compartment="fetal_brain"/>
+      <species id="FAAH_fetal" name="FAAH_Fetal" compartment="fetal_brain" initialConcentration="1"/>
+      <species id="ArachidonicAcid_fetal" name="Arachidonic_Acid_Fetal" compartment="fetal_brain" initialConcentration="5"/>
+      <species id="AM404_fetal" name="AM404_Fetal" compartment="fetal_brain"/>
+      
+      <!-- ENDOCRINE AXES -->
+      <!-- Extended hormone species -->
+      <species id="Estradiol" name="Estradiol" compartment="fetal_plasma" initialConcentration="50"/>
+      <species id="E2_effective" name="Effective_Estradiol" compartment="fetal_plasma"/>
+      <species id="T4" name="Thyroxine" compartment="fetal_plasma" initialConcentration="10"/>
+      <species id="T3" name="Triiodothyronine" compartment="fetal_plasma" initialConcentration="1"/>
+      <species id="TTR" name="Transthyretin" compartment="fetal_plasma" initialConcentration="20"/>
+      <species id="PGE2" name="Prostaglandin_E2" compartment="fetal_brain" initialConcentration="5"/>
+      <species id="AEA" name="Anandamide" compartment="fetal_brain" initialConcentration="0.5"/>
+      <species id="2AG" name="2_Arachidonoylglycerol" compartment="fetal_brain" initialConcentration="2"/>
+      
+      <!-- Binding proteins -->
+      <species id="SHBG" name="Sex_Hormone_Binding_Globulin" compartment="fetal_plasma" initialConcentration="10"/>
+      <species id="Albumin" name="Albumin" compartment="fetal_plasma" initialConcentration="100"/>
+      
+      <!-- GENERIC EDC FRAMEWORK -->
+      <!-- EDC1: APAP (already modeled above) -->
+      <!-- EDC2: Microplastics/Phthalates -->
+      <species id="EDC2_placenta" name="EDC2_Placenta" compartment="placenta"/>
+      <species id="EDC2_fetal" name="EDC2_Fetal" compartment="fetal_plasma"/>
+      <species id="EDC2_brain" name="EDC2_Brain" compartment="fetal_brain"/>
+      
+      <!-- EDC3: Glyphosate -->
+      <species id="EDC3_placenta" name="EDC3_Placenta" compartment="placenta"/>
+      <species id="EDC3_fetal" name="EDC3_Fetal" compartment="fetal_plasma"/>
+      <species id="EDC3_brain" name="EDC3_Brain" compartment="fetal_brain"/>
+      
+      <!-- EDC4: PFAS -->
+      <species id="EDC4_placenta" name="EDC4_Placenta" compartment="placenta"/>
+      <species id="EDC4_fetal" name="EDC4_Fetal" compartment="fetal_plasma"/>
+      <species id="EDC4_brain" name="EDC4_Brain" compartment="fetal_brain"/>
+      
+      <!-- EDC5: BPA/Bisphenols -->
+      <species id="EDC5_placenta" name="EDC5_Placenta" compartment="placenta"/>
+      <species id="EDC5_fetal" name="EDC5_Fetal" compartment="fetal_plasma"/>
+      <species id="EDC5_brain" name="EDC5_Brain" compartment="fetal_brain"/>
+    </listOfSpecies>
+
+    <!-- PARAMETERS -->
+    <listOfParameters>
+      <!-- Pharmacokinetic Parameters -->
+      <parameter id="k_placental_transfer" value="0.95" constant="true"/>
+      <parameter id="k_fetal_clearance" value="0.1" constant="true"/>
+      <parameter id="k_cyp2e1_activity" value="0.3" constant="true"/>
+      
+      <!-- Critical Period Parameters -->
+      <parameter id="critical_period_1" value="1.0" constant="false"/> <!-- 12-22 weeks -->
+      <parameter id="critical_period_2" value="1.0" constant="false"/> <!-- 0-6 months postnatal -->
+      <parameter id="critical_period_3" value="1.0" constant="false"/> <!-- 8-18 years -->
+      
+      <!-- Hormonal Parameters -->
+      <parameter id="T_baseline" value="450" constant="true"/> <!-- ng/dL peak fetal T -->
+      <parameter id="androgen_disruption_rate" value="0.7" constant="true"/>
+      <parameter id="masculinization_threshold" value="200" constant="true"/>
+      
+      <!-- Myelination Parameters -->
+      <parameter id="opc_proliferation_rate" value="0.5" constant="true"/>
+      <parameter id="ol_differentiation_rate" value="0.3" constant="true"/>
+      <parameter id="mbp_transcription_rate" value="1.0" constant="true"/>
+      <parameter id="myelination_efficiency" value="0.8" constant="true"/>
+      
+      <!-- Epigenetic Parameters -->
+      <parameter id="methylation_rate" value="0.2" constant="true"/>
+      <parameter id="demethylation_rate" value="0.05" constant="true"/>
+      <parameter id="sam_folate_ratio" value="2.0" constant="true"/>
+      
+      <!-- Stress Response Parameters -->
+      <parameter id="ros_generation_rate" value="0.4" constant="true"/>
+      <parameter id="antioxidant_capacity" value="1.0" constant="true"/>
+      <parameter id="oxidative_damage_threshold" value="2.0" constant="true"/>
+      
+      <!-- Connectivity Index Weights/Scales -->
+      <parameter id="w_intra" value="0.4" constant="true"/>
+      <parameter id="w_inter" value="0.4" constant="true"/>
+      <parameter id="w_cc"    value="0.2" constant="true"/>
+      
+      <parameter id="s_intra" value="1.0" constant="true"/>  <!-- scale to ~0-1 -->
+      <parameter id="s_inter" value="1.0" constant="true"/>
+      <parameter id="s_cc"    value="1.0" constant="true"/>
+      
+      <!-- Frequency Readout Coefficients -->
+      <parameter id="F_base"  value="4.5" constant="true"/>  <!-- neonatal theta baseline (Hz) -->
+      <parameter id="alpha_F" value="1.2" constant="true"/>  <!-- myelination to frequency gain -->
+      <parameter id="beta_F"  value="6.0" constant="true"/>  <!-- connectivity to frequency gain -->
+      
+      <!-- Connectivity Index holder (assignment rule below sets value) -->
+      <parameter id="C_index" value="0.0" constant="false"/>
+      
+      <!-- Myelination proxy mixing weights (OPC vs. OL populations) -->
+      <parameter id="w_OPC"      value="0.3" constant="true"/>
+      <parameter id="w_OLimm"    value="0.3" constant="true"/>
+      <parameter id="w_OLmature" value="0.4" constant="true"/>
+      
+      <!-- Small epsilon to keep ln() well-defined -->
+      <parameter id="eps_ln" value="1e-6" constant="true"/>
+      
+      <!-- Transport asymmetry -->
+      <parameter id="k_APAP_m2f" value="0.95" constant="true"/>
+      <parameter id="k_APAP_f2m" value="0.80" constant="true"/>
+      <parameter id="k_APAP_m2p" value="0.50" constant="true"/>
+      <parameter id="k_APAP_p2m" value="0.45" constant="true"/>
+      
+      <!-- Placental metabolism and detox -->
+      <parameter id="k_cyp2e1_placenta" value="0.10" constant="true"/>
+      <parameter id="k_gsh_placenta" value="0.20" constant="true"/>
+      <parameter id="k_adduct_placenta" value="0.15" constant="true"/>
+      <parameter id="k_adduct_clear_placenta" value="0.005" constant="true"/>
+      
+      <!-- Fetal adduct kinetics (very slow clearance) -->
+      <parameter id="k_adduct_fetal" value="0.20" constant="true"/>
+      <parameter id="k_adduct_clear_fetal" value="0.002" constant="true"/>
+      
+      <!-- Brain-local PAP/AM404 -->
+      <parameter id="k_deacetylation_fetal" value="0.05" constant="true"/>
+      <parameter id="k_faah" value="0.08" constant="true"/>
+      <parameter id="k_am404_clear" value="0.01" constant="true"/>
+      
+      <!-- ENDOCRINE AXIS PARAMETERS -->
+      <!-- Hormone synthesis/clearance -->
+      <parameter id="k_syn_T" value="10" constant="true"/>
+      <parameter id="k_clr_T" value="0.2" constant="true"/>
+      <parameter id="k_syn_E2" value="5" constant="true"/>
+      <parameter id="k_clr_E2" value="0.3" constant="true"/>
+      <parameter id="k_syn_T4" value="2" constant="true"/>
+      <parameter id="k_clr_T4" value="0.1" constant="true"/>
+      <parameter id="k_syn_PGE2" value="1" constant="true"/>
+      <parameter id="k_clr_PGE2" value="0.5" constant="true"/>
+      
+      <!-- Receptor parameters -->
+      <parameter id="EC50_AR_base" value="5.0" constant="true"/>
+      <parameter id="EC50_AR" value="5.0" constant="false"/>
+      <parameter id="n_AR" value="2" constant="true"/>
+      <parameter id="EC50_ER_base" value="0.1" constant="true"/>
+      <parameter id="EC50_ER" value="0.1" constant="false"/>
+      <parameter id="n_ER" value="1.5" constant="true"/>
+      
+      <!-- Binding affinities -->
+      <parameter id="kappa_SHBG" value="0.5" constant="true"/>
+      <parameter id="kappa_Alb" value="0.1" constant="true"/>
+      <parameter id="k_TTR_bind_base" value="1.0" constant="true"/>
+      <parameter id="k_TTR_bind" value="1.0" constant="false"/>
+      
+      <!-- EDC1 (APAP) PARAMETERS - reuse existing with new nomenclature -->
+      <parameter id="alpha_T_EDC1" value="0.4" constant="true"/> <!-- maps to existing androgen_disruption_rate -->
+      <parameter id="beta_T_EDC1" value="0.1" constant="true"/>
+      <parameter id="gamma_AR_EDC1" value="0.2" constant="true"/>
+      <parameter id="alpha_PGE2_EDC1" value="0.3" constant="true"/> <!-- PGE2 suppression -->
+      
+      <!-- EDC2 (Microplastics/Phthalates) PARAMETERS -->
+      <parameter id="alpha_T_EDC2" value="0.25" constant="true"/> <!-- Strong anti-androgenic -->
+      <parameter id="beta_T_EDC2" value="0.15" constant="true"/>
+      <parameter id="gamma_AR_EDC2" value="0.35" constant="true"/> <!-- Strong AR antagonist -->
+      <parameter id="alpha_E2_EDC2" value="0.1" constant="true"/>
+      <parameter id="delta_TTR_EDC2" value="0.15" constant="true"/>
+      <parameter id="alpha_PGE2_EDC2" value="0.1" constant="true"/>
+      
+      <!-- EDC3 (Glyphosate) PARAMETERS -->
+      <parameter id="alpha_T_EDC3" value="0.15" constant="true"/> <!-- Modest effect -->
+      <parameter id="beta_E2_EDC3" value="0.2" constant="true"/> <!-- Aromatase disruption -->
+      <parameter id="delta_TTR_EDC3" value="0.2" constant="true"/> <!-- Thyroid disruption -->
+      <parameter id="alpha_PGE2_EDC3" value="0.25" constant="true"/>
+      
+      <!-- EDC4 (PFAS) PARAMETERS -->
+      <parameter id="alpha_T_EDC4" value="0.1" constant="true"/>
+      <parameter id="delta_TTR_EDC4" value="0.45" constant="true"/> <!-- Strong TTR displacement -->
+      <parameter id="beta_T4_EDC4" value="0.3" constant="true"/> <!-- Thyroid clearance -->
+      <parameter id="alpha_PGE2_EDC4" value="0.15" constant="true"/>
+      
+      <!-- EDC5 (BPA/Bisphenols) PARAMETERS -->
+      <parameter id="alpha_T_EDC5" value="0.2" constant="true"/>
+      <parameter id="gamma_AR_EDC5" value="0.25" constant="true"/> <!-- AR antagonism -->
+      <parameter id="beta_ER_EDC5" value="-0.3" constant="true"/> <!-- ER agonism (negative = activation) -->
+      <parameter id="alpha_PGE2_EDC5" value="0.2" constant="true"/>
+      
+      <!-- Non-monotonic dose-response parameters (example for EDC2-phthalates) -->
+      <parameter id="EDC2_w1" value="1.0" constant="true"/>
+      <parameter id="EDC2_K1" value="0.1" constant="true"/> <!-- Low-dose effects -->
+      <parameter id="EDC2_n1" value="1.2" constant="true"/>
+      <parameter id="EDC2_w2" value="0.6" constant="true"/>
+      <parameter id="EDC2_K2" value="10.0" constant="true"/> <!-- High-dose saturation -->
+      <parameter id="EDC2_n2" value="2.0" constant="true"/>
+      
+      <!-- Simple Hill parameters for other EDCs (can be upgraded to biphasic) -->
+      <parameter id="EDC3_K" value="1.0" constant="true"/>
+      <parameter id="EDC3_n" value="1.5" constant="true"/>
+      <parameter id="EDC4_K" value="0.5" constant="true"/>
+      <parameter id="EDC4_n" value="2.0" constant="true"/>
+      <parameter id="EDC5_K" value="0.2" constant="true"/>
+      <parameter id="EDC5_n" value="1.8" constant="true"/>
+    </listOfParameters>
+
+    <!-- REACTIONS -->
+    <listOfReactions>
+      
+      <!-- PHARMACOKINETIC REACTIONS - Asymmetric Transport -->
+      
+      <!-- Maternal -> Fetal APAP -->
+      <reaction id="apap_m2f" name="APAP Maternal to Fetal" reversible="false">
+        <listOfReactants>
+          <speciesReference species="APAP_maternal"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="APAP_fetal"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_APAP_m2f</ci>
+              <ci>APAP_maternal</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Fetal -> Maternal APAP (still relatively high; APAP equilibrates) -->
+      <reaction id="apap_f2m" name="APAP Fetal to Maternal" reversible="false">
+        <listOfReactants>
+          <speciesReference species="APAP_fetal"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="APAP_maternal"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_APAP_f2m</ci>
+              <ci>APAP_fetal</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Maternal -> Placental APAP pool -->
+      <reaction id="apap_m2p" name="APAP Maternal to Placenta" reversible="false">
+        <listOfReactants>
+          <speciesReference species="APAP_maternal"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="APAP_placenta"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_APAP_m2p</ci>
+              <ci>APAP_maternal</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <reaction id="apap_p2m" name="APAP Placenta to Maternal" reversible="false">
+        <listOfReactants>
+          <speciesReference species="APAP_placenta"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="APAP_maternal"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_APAP_p2m</ci>
+              <ci>APAP_placenta</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <reaction id="cyp2e1_metabolism" name="CYP2E1-Mediated APAP Metabolism" reversible="false">
+        <listOfReactants>
+          <speciesReference species="APAP_fetal"/>
+          <speciesReference species="CYP2E1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NAPQI"/>
+          <speciesReference species="CYP2E1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_cyp2e1_activity</ci>
+              <ci>APAP_fetal</ci>
+              <ci>CYP2E1</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Placental CYP2E1 metabolism to NAPQI -->
+      <reaction id="cyp2e1_placenta" name="Placental CYP2E1 APAP Metabolism" reversible="false">
+        <listOfReactants>
+          <speciesReference species="APAP_placenta"/>
+          <speciesReference species="CYP2E1_placenta"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NAPQI_placenta"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_cyp2e1_placenta</ci>
+              <ci>APAP_placenta</ci>
+              <ci>CYP2E1_placenta</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Placental GSH conjugation (detox) -->
+      <reaction id="napqi_gsh_placenta" name="Placental NAPQI GSH Conjugation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NAPQI_placenta"/>
+          <speciesReference species="GSH_placenta"/>
+        </listOfReactants>
+        <listOfProducts>
+          <!-- conjugate omitted as sink -->
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_gsh_placenta</ci>
+              <ci>NAPQI_placenta</ci>
+              <ci>GSH_placenta</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Placental adduct formation (molecular scarring) -->
+      <reaction id="napqi_adduct_placenta" name="Placental NAPQI Protein Adduct" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NAPQI_placenta"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NAPQI_adduct_placenta"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_adduct_placenta</ci>
+              <ci>NAPQI_placenta</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Very slow placental adduct clearance -->
+      <reaction id="adduct_clear_placenta" name="Placental Adduct Clearance" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NAPQI_adduct_placenta"/>
+        </listOfReactants>
+        <listOfProducts/>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_adduct_clear_placenta</ci>
+              <ci>NAPQI_adduct_placenta</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Fetal NAPQI adduct formation -->
+      <reaction id="napqi_adduct_fetal" name="Fetal NAPQI Protein Adduct" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NAPQI"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="NAPQI_adduct_fetal"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_adduct_fetal</ci>
+              <ci>NAPQI</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <reaction id="adduct_clear_fetal" name="Fetal Adduct Clearance" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NAPQI_adduct_fetal"/>
+        </listOfReactants>
+        <listOfProducts/>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_adduct_clear_fetal</ci>
+              <ci>NAPQI_adduct_fetal</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Brain-local formation of PAP and AM404 -->
+      <reaction id="apap_deacetylation_fetal" name="Fetal Deacetylation to PAP" reversible="false">
+        <listOfReactants>
+          <speciesReference species="APAP_fetal"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PAP_fetal"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_deacetylation_fetal</ci>
+              <ci>APAP_fetal</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <reaction id="faah_am404" name="FAAH-mediated AM404 Synthesis" reversible="false">
+        <listOfReactants>
+          <speciesReference species="PAP_fetal"/>
+          <speciesReference species="ArachidonicAcid_fetal"/>
+          <speciesReference species="FAAH_fetal"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AM404_fetal"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_faah</ci>
+              <ci>PAP_fetal</ci>
+              <ci>FAAH_fetal</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <reaction id="am404_clear" name="AM404 Clearance (slow)" reversible="false">
+        <listOfReactants>
+          <speciesReference species="AM404_fetal"/>
+        </listOfReactants>
+        <listOfProducts/>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_am404_clear</ci>
+              <ci>AM404_fetal</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- ENDOCRINE DISRUPTION -->
+      <reaction id="testosterone_disruption" name="APAP-Mediated Testosterone Disruption" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Testosterone"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="T_effective"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>Testosterone</ci>
+              <apply>
+                <minus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <ci>androgen_disruption_rate</ci>
+                  <ci>APAP_fetal</ci>
+                  <ci>critical_period_1</ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- OXIDATIVE STRESS GENERATION -->
+      <reaction id="ros_generation" name="NAPQI-Induced ROS Generation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="NAPQI"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ROS"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>ros_generation_rate</ci>
+              <ci>NAPQI</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- FOLATE DEPLETION -->
+      <reaction id="folate_consumption" name="APAP-Mediated Folate Depletion" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Folate"/>
+        </listOfReactants>
+        <listOfProducts/>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn>0.3</cn>
+              <ci>Folate</ci>
+              <ci>APAP_fetal</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- OLIGODENDROCYTE LINEAGE PROGRESSION -->
+      <reaction id="opc_proliferation" name="OPC Proliferation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="OPC"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="OPC" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>opc_proliferation_rate</ci>
+              <ci>OPC</ci>
+              <apply>
+                <plus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <cn>0.5</cn>
+                  <ci>Folate</ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <cn>0.6</cn>
+                  <ci>ROS</ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <reaction id="ol_differentiation" name="Oligodendrocyte Differentiation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="OPC"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="OL_immature"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>ol_differentiation_rate</ci>
+              <ci>OPC</ci>
+              <ci>T_effective</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- EPIGENETIC REGULATION -->
+      <reaction id="mbp_methylation" name="MBP Promoter Methylation" reversible="true">
+        <listOfReactants>
+          <speciesReference species="MBP_promoter"/>
+          <speciesReference species="SAM"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MBP_promoter_meth"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>methylation_rate</ci>
+              <ci>MBP_promoter</ci>
+              <ci>SAM</ci>
+              <apply>
+                <plus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <cn>2</cn>
+                  <ci>APAP_fetal</ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- MBP TRANSCRIPTION AND TRANSLATION -->
+      <reaction id="mbp_transcription" name="MBP mRNA Synthesis" reversible="false">
+        <listOfReactants>
+          <speciesReference species="MBP_promoter"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MBP_mRNA"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>mbp_transcription_rate</ci>
+              <ci>MBP_promoter</ci>
+              <ci>T_effective</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <reaction id="mbp_translation" name="MBP Protein Synthesis" reversible="false">
+        <listOfReactants>
+          <speciesReference species="MBP_mRNA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="MBP_protein"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn>0.8</cn>
+              <ci>MBP_mRNA</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- MYELINATION PROCESS -->
+      <reaction id="myelination" name="Myelin Sheath Formation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="OL_mature"/>
+          <speciesReference species="MBP_protein"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Myelin_sheath"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>myelination_efficiency</ci>
+              <ci>OL_mature</ci>
+              <ci>MBP_protein</ci>
+              <apply>
+                <minus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <cn>0.5</cn>
+                  <ci>APAP_fetal</ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <!-- CONNECTOME FORMATION -->
+      <reaction id="intra_hemisphere_connectivity" name="Within-Hemisphere Connection Formation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Myelin_sheath"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Intra_hemisphere_connectivity"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>Myelin_sheath</ci>
+              <apply>
+                <plus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <cn>0.8</cn>
+                  <ci>T_effective</ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      <reaction id="inter_hemisphere_connectivity" name="Between-Hemisphere Connection Formation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Myelin_sheath"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Inter_hemisphere_connectivity"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>Myelin_sheath</ci>
+              <apply>
+                <minus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <cn>0.6</cn>
+                  <ci>T_effective</ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+
+      
+      <!-- HORMONAL DYNAMICS REACTIONS -->
+      <!-- Note: Since our simulator doesn't handle assignment rules, we approximate with reactions -->
+      
+      <!-- Testosterone production reaction (simplified approximation) -->
+      <reaction id="testosterone_synthesis" name="Testosterone Synthesis">
+        <listOfProducts>
+          <speciesReference species="Testosterone" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn>2.5</cn> <!-- Simplified constant rate -->
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Testosterone degradation -->
+      <reaction id="testosterone_degradation" name="Testosterone Degradation">
+        <listOfReactants>
+          <speciesReference species="Testosterone" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn>0.01</cn>
+              <ci>Testosterone</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Testosterone effectiveness calculation with APAP interference -->
+      <!-- T_effective = Testosterone * (1 - 0.4 * APAP_fetal/(APAP_fetal + 10)) -->
+      <reaction id="testosterone_effectiveness" name="Testosterone Effectiveness with APAP Interference">
+        <listOfReactants>
+          <speciesReference species="Testosterone" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="T_effective" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>Testosterone</ci>
+              <apply>
+                <minus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <cn>0.4</cn> <!-- 40% reduction at max APAP -->
+                  <apply>
+                    <divide/>
+                    <ci>APAP_fetal</ci>
+                    <apply>
+                      <plus/>
+                      <ci>APAP_fetal</ci>
+                      <cn>10</cn> <!-- Half-max constant -->
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+    </listOfReactions>
+
+    <!-- RULES -->
+    <listOfRules>
+      <!-- Assignment rules for hormone curves as functions of gestational_week -->
+      
+      <!-- Testosterone: Gaussian surge peaking at week 14-17 -->
+      <assignmentRule variable="Testosterone">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <!-- Baseline testosterone -->
+            <cn>30</cn>
+            <!-- Gaussian surge -->
+            <apply>
+              <times/>
+              <cn>420</cn> <!-- Peak amplitude -->
+              <apply>
+                <exp/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <minus/>
+                        <ci>gestational_week</ci>
+                        <cn>17</cn> <!-- Peak at week 17 -->
+                      </apply>
+                      <cn>2</cn>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn>2</cn>
+                      <apply>
+                        <power/>
+                        <cn>3</cn> <!-- Sigma = 3 weeks -->
+                        <cn>2</cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- LH: Similar surge but earlier peak -->
+      <assignmentRule variable="LH">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <cn>10</cn> <!-- Baseline -->
+            <apply>
+              <times/>
+              <cn>60</cn> <!-- Peak amplitude -->
+              <apply>
+                <exp/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <minus/>
+                        <ci>gestational_week</ci>
+                        <cn>15</cn> <!-- Peak at week 15 -->
+                      </apply>
+                      <cn>2</cn>
+                    </apply>
+                    <cn>18</cn> <!-- 2 * sigma^2 -->
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- FSH: Similar to LH but lower amplitude -->
+      <assignmentRule variable="FSH">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <cn>5</cn> <!-- Baseline -->
+            <apply>
+              <times/>
+              <cn>35</cn> <!-- Peak amplitude -->
+              <apply>
+                <exp/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <minus/>
+                        <ci>gestational_week</ci>
+                        <cn>15</cn> <!-- Peak at week 15 -->
+                      </apply>
+                      <cn>2</cn>
+                    </apply>
+                    <cn>20</cn> <!-- 2 * sigma^2 -->
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- T_effective: Testosterone reduced by APAP presence -->
+      <assignmentRule variable="T_effective">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci>Testosterone</ci>
+            <apply>
+              <minus/>
+              <cn>1</cn>
+              <apply>
+                <times/>
+                <cn>0.4</cn> <!-- 40% max reduction -->
+                <apply>
+                  <divide/>
+                  <ci>APAP_fetal</ci>
+                  <apply>
+                    <plus/>
+                    <ci>APAP_fetal</ci>
+                    <cn>10</cn> <!-- Half-max constant -->
+                  </apply>
+                </apply>
+                <ci>critical_period_1</ci> <!-- Only during critical period -->
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- Gestational week progression: 1 week per 168 hours -->
+      <rateRule variable="gestational_week">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <cn>1</cn>
+            <cn>168</cn> <!-- 1 week = 168 hours -->
+          </apply>
+        </math>
+      </rateRule>
+      
+      <!-- Myelination proxy (unitless 0-1-ish): combine lineage populations -->
+      <assignmentRule variable="O_proxy">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci>w_OPC</ci>
+              <ci>OPC</ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci>w_OLimm</ci>
+              <ci>OL_immature</ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci>w_OLmature</ci>
+              <ci>OL_mature</ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- Connectivity index from existing species (scaled & weighted) -->
+      <assignmentRule variable="C_index">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <ci>w_intra</ci>
+              <apply>
+                <divide/>
+                <ci>Intra_hemisphere_connectivity</ci>
+                <ci>s_intra</ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci>w_inter</ci>
+              <apply>
+                <divide/>
+                <ci>Inter_hemisphere_connectivity</ci>
+                <ci>s_inter</ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci>w_cc</ci>
+              <apply>
+                <divide/>
+                <ci>Corpus_callosum_volume</ci>
+                <ci>s_cc</ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- Oscillatory frequency readout: F = F_base + alpha*ln(O_proxy+eps) + beta*C_index -->
+      <assignmentRule variable="F">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci>F_base</ci>
+            <apply>
+              <times/>
+              <ci>alpha_F</ci>
+              <apply>
+                <ln/>
+                <apply>
+                  <plus/>
+                  <ci>O_proxy</ci>
+                  <ci>eps_ln</ci>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci>beta_F</ci>
+              <ci>C_index</ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- EDC-MODULATED PARAMETERS -->
+      <!-- AR sensitivity (EC50) modulated by multiple EDCs -->
+      <assignmentRule variable="EC50_AR">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci>EC50_AR_base</ci>
+            <!-- Product of all EDC effects on AR -->
+            <apply>
+              <times/>
+              <!-- EDC1 (APAP) effect -->
+              <apply>
+                <plus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <ci>gamma_AR_EDC1</ci>
+                  <apply>
+                    <edc_hill/>
+                    <ci>APAP_fetal</ci>
+                    <cn>1</cn> <!-- K=1mM -->
+                    <cn>2</cn> <!-- n=2 -->
+                  </apply>
+                </apply>
+              </apply>
+              <!-- EDC2 (Phthalates) non-monotonic effect -->
+              <apply>
+                <plus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <ci>gamma_AR_EDC2</ci>
+                  <apply>
+                    <edc_biphasic/>
+                    <ci>EDC2_brain</ci>
+                    <ci>EDC2_w1</ci>
+                    <ci>EDC2_K1</ci>
+                    <ci>EDC2_n1</ci>
+                    <ci>EDC2_w2</ci>
+                    <ci>EDC2_K2</ci>
+                    <ci>EDC2_n2</ci>
+                  </apply>
+                </apply>
+              </apply>
+              <!-- EDC5 (BPA) effect -->
+              <apply>
+                <plus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <ci>gamma_AR_EDC5</ci>
+                  <apply>
+                    <edc_hill/>
+                    <ci>EDC5_brain</ci>
+                    <ci>EDC5_K</ci>
+                    <ci>EDC5_n</ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- ER sensitivity modulated by EDCs -->
+      <assignmentRule variable="EC50_ER">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci>EC50_ER_base</ci>
+            <!-- EDC5 (BPA) acts as ER agonist (decreases EC50 when beta_ER_EDC5 < 0) -->
+            <apply>
+              <plus/>
+              <cn>1</cn>
+              <apply>
+                <times/>
+                <ci>beta_ER_EDC5</ci>
+                <apply>
+                  <edc_hill/>
+                  <ci>EDC5_brain</ci>
+                  <ci>EDC5_K</ci>
+                  <ci>EDC5_n</ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- TTR binding modulated by EDCs (affects thyroid hormone transport) -->
+      <assignmentRule variable="k_TTR_bind">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci>k_TTR_bind_base</ci>
+            <!-- Product rule for multiple EDCs affecting TTR -->
+            <apply>
+              <times/>
+              <!-- EDC2 (Phthalates) effect -->
+              <apply>
+                <minus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <ci>delta_TTR_EDC2</ci>
+                  <apply>
+                    <edc_biphasic/>
+                    <ci>EDC2_placenta</ci>
+                    <ci>EDC2_w1</ci>
+                    <ci>EDC2_K1</ci>
+                    <ci>EDC2_n1</ci>
+                    <ci>EDC2_w2</ci>
+                    <ci>EDC2_K2</ci>
+                    <ci>EDC2_n2</ci>
+                  </apply>
+                </apply>
+              </apply>
+              <!-- EDC3 (Glyphosate) effect -->
+              <apply>
+                <minus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <ci>delta_TTR_EDC3</ci>
+                  <apply>
+                    <edc_hill/>
+                    <ci>EDC3_placenta</ci>
+                    <ci>EDC3_K</ci>
+                    <ci>EDC3_n</ci>
+                  </apply>
+                </apply>
+              </apply>
+              <!-- EDC4 (PFAS) strong effect -->
+              <apply>
+                <minus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <ci>delta_TTR_EDC4</ci>
+                  <apply>
+                    <edc_hill/>
+                    <ci>EDC4_placenta</ci>
+                    <ci>EDC4_K</ci>
+                    <ci>EDC4_n</ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+
+    <!-- EVENTS (Critical Period Timing) -->
+    <listOfEvents>
+      <event id="first_puberty_onset" name="First Fetal Puberty (12-22 weeks)">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <geq/>
+              <ci>gestational_week</ci>
+              <cn>12</cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="critical_period_1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>3.5</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      
+      <event id="first_puberty_end" name="End First Fetal Puberty">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <gt/>
+              <ci>gestational_week</ci>
+              <cn>22</cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="critical_period_1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1.0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+
+  </model>
+</sbml>

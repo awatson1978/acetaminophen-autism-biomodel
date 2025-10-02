@@ -23,7 +23,9 @@
       <species id="NAPQI" name="N_acetyl_p_benzoquinone_imine" compartment="fetal_brain"/>
       
       <!-- Endocrine Species -->
-      <species id="Testosterone" name="Testosterone" compartment="fetal_plasma"/>
+      <species id="Testosterone" name="Testosterone" compartment="fetal_plasma" initialConcentration="0"/>
+      <species id="LH" name="Luteinizing_Hormone" compartment="fetal_plasma" initialConcentration="0"/>
+      <species id="FSH" name="Follicle_Stimulating_Hormone" compartment="fetal_plasma" initialConcentration="0"/>
       <species id="T_effective" name="Bioavailable_Testosterone" compartment="fetal_brain"/>
       <species id="AromataseComplex" name="Aromatase_APAP_Complex" compartment="placenta"/>
       
@@ -57,6 +59,9 @@
       <species id="Intra_hemisphere_connectivity" name="Within_Hemisphere_Connections" compartment="fetal_brain"/>
       <species id="Inter_hemisphere_connectivity" name="Between_Hemisphere_Connections" compartment="fetal_brain"/>
       <species id="Corpus_callosum_volume" name="Corpus_Callosum_Volume" compartment="fetal_brain"/>
+      
+      <!-- Time tracking species (for rate rules) -->
+      <species id="gestational_week" name="Gestational_Week" compartment="fetal_plasma" initialConcentration="0"/>
     </listOfSpecies>
 
     <!-- PARAMETERS -->
@@ -67,7 +72,6 @@
       <parameter id="k_cyp2e1_activity" value="0.3" constant="true"/>
       
       <!-- Critical Period Parameters -->
-      <parameter id="gestational_week" value="12" constant="false"/>
       <parameter id="critical_period_1" value="1.0" constant="false"/> <!-- 12-22 weeks -->
       <parameter id="critical_period_2" value="1.0" constant="false"/> <!-- 0-6 months postnatal -->
       <parameter id="critical_period_3" value="1.0" constant="false"/> <!-- 8-18 years -->
@@ -409,7 +413,228 @@
         </kineticLaw>
       </reaction>
 
+      
+      <!-- HORMONAL DYNAMICS REACTIONS -->
+      <!-- Note: Since our simulator doesn't handle assignment rules, we approximate with reactions -->
+      
+      <!-- Testosterone production reaction (simplified approximation) -->
+      <reaction id="testosterone_synthesis" name="Testosterone Synthesis">
+        <listOfProducts>
+          <speciesReference species="Testosterone" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn>2.5</cn> <!-- Simplified constant rate -->
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Testosterone degradation -->
+      <reaction id="testosterone_degradation" name="Testosterone Degradation">
+        <listOfReactants>
+          <speciesReference species="Testosterone" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn>0.01</cn>
+              <ci>Testosterone</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
+      <!-- Testosterone effectiveness calculation with APAP interference -->
+      <!-- T_effective = Testosterone * (1 - 0.4 * APAP_fetal/(APAP_fetal + 10)) -->
+      <reaction id="testosterone_effectiveness" name="Testosterone Effectiveness with APAP Interference">
+        <listOfReactants>
+          <speciesReference species="Testosterone" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="T_effective" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>Testosterone</ci>
+              <apply>
+                <minus/>
+                <cn>1</cn>
+                <apply>
+                  <times/>
+                  <cn>0.4</cn> <!-- 40% reduction at max APAP -->
+                  <apply>
+                    <divide/>
+                    <ci>APAP_fetal</ci>
+                    <apply>
+                      <plus/>
+                      <ci>APAP_fetal</ci>
+                      <cn>10</cn> <!-- Half-max constant -->
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      
     </listOfReactions>
+
+    <!-- RULES -->
+    <listOfRules>
+      <!-- Assignment rules for hormone curves as functions of gestational_week -->
+      
+      <!-- Testosterone: Gaussian surge peaking at week 14-17 -->
+      <assignmentRule variable="Testosterone">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <!-- Baseline testosterone -->
+            <cn>30</cn>
+            <!-- Gaussian surge -->
+            <apply>
+              <times/>
+              <cn>420</cn> <!-- Peak amplitude -->
+              <apply>
+                <exp/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <minus/>
+                        <ci>gestational_week</ci>
+                        <cn>17</cn> <!-- Peak at week 17 -->
+                      </apply>
+                      <cn>2</cn>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn>2</cn>
+                      <apply>
+                        <power/>
+                        <cn>3</cn> <!-- Sigma = 3 weeks -->
+                        <cn>2</cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- LH: Similar surge but earlier peak -->
+      <assignmentRule variable="LH">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <cn>10</cn> <!-- Baseline -->
+            <apply>
+              <times/>
+              <cn>60</cn> <!-- Peak amplitude -->
+              <apply>
+                <exp/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <minus/>
+                        <ci>gestational_week</ci>
+                        <cn>15</cn> <!-- Peak at week 15 -->
+                      </apply>
+                      <cn>2</cn>
+                    </apply>
+                    <cn>18</cn> <!-- 2 * sigma^2 -->
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- FSH: Similar to LH but lower amplitude -->
+      <assignmentRule variable="FSH">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <cn>5</cn> <!-- Baseline -->
+            <apply>
+              <times/>
+              <cn>35</cn> <!-- Peak amplitude -->
+              <apply>
+                <exp/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <minus/>
+                        <ci>gestational_week</ci>
+                        <cn>15</cn> <!-- Peak at week 15 -->
+                      </apply>
+                      <cn>2</cn>
+                    </apply>
+                    <cn>20</cn> <!-- 2 * sigma^2 -->
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- T_effective: Testosterone reduced by APAP presence -->
+      <assignmentRule variable="T_effective">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci>Testosterone</ci>
+            <apply>
+              <minus/>
+              <cn>1</cn>
+              <apply>
+                <times/>
+                <cn>0.4</cn> <!-- 40% max reduction -->
+                <apply>
+                  <divide/>
+                  <ci>APAP_fetal</ci>
+                  <apply>
+                    <plus/>
+                    <ci>APAP_fetal</ci>
+                    <cn>10</cn> <!-- Half-max constant -->
+                  </apply>
+                </apply>
+                <ci>critical_period_1</ci> <!-- Only during critical period -->
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      
+      <!-- Gestational week progression: 1 week per 168 hours -->
+      <rateRule variable="gestational_week">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <cn>1</cn>
+            <cn>168</cn> <!-- 1 week = 168 hours -->
+          </apply>
+        </math>
+      </rateRule>
+    </listOfRules>
 
     <!-- EVENTS (Critical Period Timing) -->
     <listOfEvents>

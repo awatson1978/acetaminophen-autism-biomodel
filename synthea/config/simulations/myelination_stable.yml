@@ -1,0 +1,86 @@
+# Stable Myelination Model - Conservative parameters for 40 weeks
+name: myelination_stable
+
+# Name of the model file (SBML format)
+model: APAP_Myelination_Model.xml
+
+# Solver configuration
+solver: dormand_prince_54  # More stable solver for stiff equations
+stepSize: 1  # 1 hour steps for stability
+duration: 6720  # 40 weeks (280 days * 24 hours)
+
+## Initial conditions - conservative values
+inputs:
+    # APAP exposure - very low continuous exposure
+    APAP_maternal: 0.5  # Much lower dose
+    APAP_placenta: 0.0
+    APAP_fetal: 0.0
+    NAPQI: 0.0
+    
+    # Endocrine system
+    Testosterone: 200.0  # More moderate level
+    T_effective: 100.0  # Start with some baseline
+    
+    # Cell populations
+    OPC: 1000.0
+    OL_immature: 100.0
+    OL_mature: 50.0
+    
+    # Oxidative stress markers
+    CYP2E1: 0.5  # Lower enzyme level
+    GSH: 100.0
+    GSSG: 10.0  # Some oxidized glutathione
+    ROS: 5.0  # Lower initial ROS
+    
+    # Supporting systems
+    Folate: 50.0
+    SAM: 25.0
+    
+    # Time tracking
+    gestational_week: 12.0
+    critical_period_1: 1.0
+    critical_period_2: 0.0
+    critical_period_3: 0.0
+    
+    # Very conservative rates to prevent explosion
+    k_placental_transfer: 0.01  # Much slower transfer
+    k_fetal_clearance: 0.1  # Faster clearance
+    k_cyp2e1_activity: 0.01  # Very low activity
+    opc_proliferation_rate: 0.001  # Very slow growth
+    ol_differentiation_rate: 0.0005  # Very slow differentiation
+    ros_generation_rate: 0.01  # Minimal ROS generation
+    androgen_disruption_rate: 0.01  # Minimal disruption
+    
+# Simple charts to monitor stability
+charts:
+    - filename: apap_stable.png
+      type: line
+      title: "APAP Levels (40 weeks)"
+      axisParamX: time
+      axisLabelX: "Hours"
+      axisLabelY: "Concentration"
+      series:
+        - param: APAP_maternal
+        - param: APAP_fetal
+        - param: NAPQI
+    
+    - filename: oxidative_stable.png
+      type: line
+      title: "Oxidative Stress (40 weeks)"
+      axisParamX: time
+      axisLabelX: "Hours"
+      axisLabelY: "Level"
+      series:
+        - param: ROS
+        - param: GSH
+        - param: GSSG
+    
+    - filename: testosterone_stable.png
+      type: line
+      title: "Testosterone (40 weeks)"
+      axisParamX: time
+      axisLabelX: "Hours"
+      axisLabelY: "Level"
+      series:
+        - param: Testosterone
+        - param: T_effective

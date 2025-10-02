@@ -1,0 +1,156 @@
+# Myelination and Neurodevelopment Model with APAP Exposure
+# Models acetaminophen (APAP) exposure effects on fetal brain development
+# Tracks critical periods, testosterone disruption, and myelination impacts
+
+# Data and charts will be placed in output/physiology/{name}/
+# Data file will always be output/physiology/{name}/{name}.csv
+name: myelination
+
+# Name of the model file (SBML format)
+model: APAP_Myelination_Model.xml
+
+# Which differential equation solver to use.
+# Options: adams_bashforth, adams_moulton, dormand_prince_54, dormand_prince_853, euler, gragg_bulirsh_stoer, higham_hall_54, rosenbrock, runge_kutta
+solver: runge_kutta
+
+# Simulation step size in hours (0.1 hour = 6 minutes for numerical stability)
+stepSize: 0.1
+
+# Simulation duration in hours (test 1 week first = 168 hours)
+duration: 168
+
+## Model parameter inputs. Any unspecified parameters will use the model's default value.
+inputs:
+    # Initial species concentrations
+    APAP_maternal: 10.0  # Initial maternal APAP concentration (mM)
+    APAP_placenta: 0.0  # Start with no placental APAP
+    APAP_fetal: 0.0  # Start with no fetal APAP
+    NAPQI: 0.0  # Start with no NAPQI
+    Testosterone: 450.0  # Baseline fetal testosterone (ng/dL)
+    T_effective: 100.0  # Some baseline effective testosterone
+    OPC: 1000.0  # Initial OPC count
+    OL_immature: 100.0  # Some immature oligodendrocytes
+    OL_mature: 10.0  # Some mature oligodendrocytes
+    Folate: 50.0  # Baseline folate
+    GSH: 100.0  # Baseline glutathione
+    GSSG: 0.0  # Start with no oxidized glutathione
+    ROS: 0.0  # Start with no ROS
+    SAM: 20.0  # Baseline S-adenosyl methionine
+    MBP_promoter: 1.0  # Unmethylated promoter
+    MBP_promoter_meth: 0.0  # No methylated promoter initially
+    MBP_mRNA: 0.0  # No mRNA initially
+    MBP_protein: 0.0  # No protein initially
+    Myelin_sheath: 0.0  # No myelin initially
+    CYP2E1: 1.0  # Baseline CYP2E1
+    CYP2E1_APAP: 0.0  # No complex initially
+    DNMT1: 1.0  # Some methyltransferase
+    Intra_hemisphere_connectivity: 0.0  # Start at zero
+    Inter_hemisphere_connectivity: 0.0  # Start at zero
+    Corpus_callosum_volume: 0.0  # Start at zero
+    AromataseComplex: 0.0  # Start at zero
+    gestational_week: 12.0  # Start at week 12
+    
+    # Critical period parameters (gestational weeks)
+    critical_period_1_start: 504  # Week 12 in hours (12 * 7 * 24)
+    critical_period_1_end: 924    # Week 22 in hours (22 * 7 * 24)
+    critical_period_2_start: 840   # Week 20 in hours
+    critical_period_2_end: 1008    # Week 24 in hours
+    
+    # Folate protection level (1.0 = normal, 2.0 = supplemented)
+    maternal_folate_level: 1.0
+    
+    # Placental transfer efficiency (0.0-1.0)
+    placental_transfer_rate: 0.45
+    
+    # OPC toxicity parameters (Hill function)
+    apap_toxicity_ec50: 5.0  # mM concentration for 50% effect
+    apap_toxicity_hill: 2.5  # Hill coefficient
+    
+    # Testosterone disruption parameters
+    testosterone_baseline: 100  # Baseline fetal testosterone (arbitrary units)
+    testosterone_disruption_factor: 0.4  # 40% reduction during critical period
+    
+    # Myelination parameters
+    myelin_production_rate: 0.8
+    myelin_degradation_rate: 0.05
+    opc_proliferation_rate: 0.01  # Growth rate with carrying capacity limit
+    opc_differentiation_rate: 0.0001  # Reduced to match slower proliferation
+    
+    # ROS and oxidative stress parameters
+    ros_production_rate: 0.1
+    ros_clearance_rate: 0.5
+    glutathione_baseline: 100
+    
+    # Connectivity outcome thresholds
+    connectivity_threshold_mild: 0.85  # 85% of normal
+    connectivity_threshold_moderate: 0.70  # 70% of normal
+    connectivity_threshold_severe: 0.55  # 55% of normal
+
+# What charts to draw. Results will be plotted on PNG images.
+charts:
+    - filename: apap_exposure.png
+      type: line
+      title: "APAP Exposure Levels"
+      axisParamX: time
+      axisLabelX: Gestational Age (hours)
+      axisLabelY: Concentration (mM)
+      series:
+        - param: APAP_maternal
+        - param: APAP_placenta
+        - param: APAP_fetal
+    
+    - filename: testosterone_levels.png
+      type: line
+      title: "Testosterone and Critical Periods"
+      axisParamX: time
+      axisLabelX: Gestational Age (hours)
+      axisLabelY: Testosterone Level (AU)
+      series:
+        - param: Testosterone
+        - param: T_effective
+        - param: critical_period_1
+    
+    - filename: opc_dynamics.png
+      type: line
+      title: "OPC Population Dynamics"
+      axisParamX: time
+      axisLabelX: Gestational Age (hours)
+      axisLabelY: Cell Count (normalized)
+      series:
+        - param: OPC
+        - param: OL_immature
+        - param: OL_mature
+    
+    - filename: myelination_status.png
+      type: line
+      title: "Myelination Progress"
+      axisParamX: time
+      axisLabelX: Gestational Age (hours)
+      axisLabelY: Myelin Content (normalized)
+      series:
+        - param: Myelin_sheath
+        - param: MBP_protein
+        - param: MBP_mRNA
+    
+    - filename: oxidative_stress.png
+      type: line
+      title: "Oxidative Stress Markers"
+      axisParamX: time
+      axisLabelX: Gestational Age (hours)
+      axisLabelY: Level (AU)
+      series:
+        - param: ROS
+        - param: GSH
+        - param: GSSG
+    
+    - filename: connectivity_outcome.png
+      type: line
+      title: "Neural Connectivity Outcomes"
+      axisParamX: time
+      axisLabelX: Gestational Age (hours)
+      axisLabelY: Connectivity Score (0-1)
+      series:
+        - param: Intra_hemisphere_connectivity
+        - param: Inter_hemisphere_connectivity
+
+# Additional parameters can be added in the inputs section above

@@ -1,0 +1,52 @@
+# Simplified Myelination Model - Testing basic dynamics
+name: myelination_simple
+
+# Name of the model file (SBML format)
+model: APAP_Myelination_Model.xml
+
+# Solver configuration
+solver: runge_kutta
+stepSize: 1
+duration: 168  # 1 week test
+
+## Initial conditions - simplified
+inputs:
+    # Core species only
+    APAP_maternal: 10.0
+    APAP_fetal: 0.0
+    Testosterone: 100.0
+    T_effective: 0.0
+    OPC: 1000.0
+    OL_immature: 0.0
+    OL_mature: 0.0
+    Folate: 50.0
+    GSH: 100.0
+    ROS: 0.0
+    gestational_week: 12.0
+    
+    # Disable most rates initially
+    k_placental_transfer: 0.01
+    opc_proliferation_rate: 0.0  # Disable for now
+    ol_differentiation_rate: 0.0  # Disable for now
+    
+# Simple charts to debug
+charts:
+    - filename: apap_simple.png
+      type: line
+      title: "APAP Transfer"
+      axisParamX: time
+      axisLabelX: Hours
+      axisLabelY: Concentration
+      series:
+        - param: APAP_maternal
+        - param: APAP_fetal
+    
+    - filename: cells_simple.png
+      type: line
+      title: "Cell Populations"
+      axisParamX: time
+      axisLabelX: Hours
+      axisLabelY: Count
+      series:
+        - param: OPC
+        - param: gestational_week

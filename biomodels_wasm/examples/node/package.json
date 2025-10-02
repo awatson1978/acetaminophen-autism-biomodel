@@ -1,0 +1,10 @@
+{
+  "name": "biomodels-wasm-node-example",
+  "version": "1.0.0",
+  "description": "Node.js example for BioModels WASM",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {}
+}
